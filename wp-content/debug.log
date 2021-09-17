@@ -1406,3 +1406,168 @@ Stack trace:
 [17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\blog_posts.php on line 3
 [17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $code follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\google_maps.php on line 3
 [17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\portfolio.php on line 4
+[17-Sep-2021 14:43:51 UTC] PHP Deprecated:  Required parameter $post follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-includes\functions.php on line 840
+[17-Sep-2021 14:43:51 UTC] PHP Warning:  Private methods cannot be final as they are never overridden by other classes in C:\xampp\htdocs\grundsolo\wp-includes\class-wp-session-tokens.php on line 69
+[17-Sep-2021 14:43:51 UTC] PHP Deprecated:  Required parameter $tt_id follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:43:51 UTC] PHP Deprecated:  Required parameter $taxonomy follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:43:51 UTC] PHP Deprecated:  Required parameter $block_attributes follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:43:51 UTC] PHP Deprecated:  Required parameter $block_content follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:43:51 UTC] PHP Deprecated:  Required parameter $plugin follows optional parameter $options in C:\xampp\htdocs\grundsolo\wp-content\plugins\cyrlitera\libs\factory\forms\includes\form.class.php on line 266
+[17-Sep-2021 14:43:51 UTC] PHP Deprecated:  Required parameter $total follows optional parameter $key in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\class-wc-cart-totals.php on line 542
+[17-Sep-2021 14:43:51 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Notices::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-notices.php on line 46
+[17-Sep-2021 14:43:51 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Path::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-path.php on line 57
+[17-Sep-2021 14:43:51 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Extensions::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-extensions.php on line 35
+[17-Sep-2021 14:43:51 UTC] PHP Warning:  The magic method Automattic\WooCommerce\Admin\FeaturePlugin::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\FeaturePlugin.php on line 314
+[17-Sep-2021 14:43:51 UTC] PHP Deprecated:  Required parameter $value follows optional parameter $address in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\class-wc-order.php on line 986
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\tabs.php on line 3
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\blog_posts.php on line 3
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $code follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\google_maps.php on line 3
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\portfolio.php on line 4
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\ux_products.php on line 4
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\ux_products_list.php on line 4
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\product_flip.php on line 4
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\product_categories.php on line 4
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $post follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-includes\functions.php on line 840
+[17-Sep-2021 14:43:52 UTC] PHP Warning:  Private methods cannot be final as they are never overridden by other classes in C:\xampp\htdocs\grundsolo\wp-includes\class-wp-session-tokens.php on line 69
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $tt_id follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $taxonomy follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $block_attributes follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $block_content follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $total follows optional parameter $key in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\class-wc-cart-totals.php on line 542
+[17-Sep-2021 14:43:52 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Notices::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-notices.php on line 46
+[17-Sep-2021 14:43:52 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Path::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-path.php on line 57
+[17-Sep-2021 14:43:52 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Extensions::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-extensions.php on line 35
+[17-Sep-2021 14:43:52 UTC] PHP Warning:  The magic method Automattic\WooCommerce\Admin\FeaturePlugin::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\FeaturePlugin.php on line 314
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $value follows optional parameter $address in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\class-wc-order.php on line 986
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\tabs.php on line 3
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\blog_posts.php on line 3
+[17-Sep-2021 14:43:52 UTC] PHP Deprecated:  Required parameter $code follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\google_maps.php on line 3
+[17-Sep-2021 14:43:53 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\portfolio.php on line 4
+[17-Sep-2021 14:43:53 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\ux_products.php on line 4
+[17-Sep-2021 14:43:53 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\ux_products_list.php on line 4
+[17-Sep-2021 14:43:53 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\product_flip.php on line 4
+[17-Sep-2021 14:43:53 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\product_categories.php on line 4
+[17-Sep-2021 14:43:53 UTC] PHP Warning:  The magic method Automattic\WooCommerce\RestApi\Utilities\SingletonTrait::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\rest-api\Utilities\SingletonTrait.php on line 48
+[17-Sep-2021 14:43:53 UTC] PHP Deprecated:  Required parameter $term follows optional parameter $actions in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-taxonomies.php on line 390
+[17-Sep-2021 14:43:53 UTC] PHP Warning:  The magic method Automattic\WooCommerce\RestApi\Utilities\SingletonTrait::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\rest-api\Utilities\SingletonTrait.php on line 48
+[17-Sep-2021 14:43:53 UTC] PHP Fatal error:  Uncaught Error: Unknown named parameter $id in C:\xampp\htdocs\grundsolo\wp-includes\class-wp-hook.php:287
+Stack trace:
+#0 C:\xampp\htdocs\grundsolo\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#1 C:\xampp\htdocs\grundsolo\wp-includes\plugin.php(544): WP_Hook->do_action(Array)
+#2 C:\xampp\htdocs\grundsolo\wp-cron.php(138): do_action_ref_array('hmbkp_schedule_...', Array)
+#3 {main}
+  thrown in C:\xampp\htdocs\grundsolo\wp-includes\class-wp-hook.php on line 287
+[17-Sep-2021 14:43:53 UTC] PHP Fatal error:  Uncaught ValueError: Unknown format specifier "a" in C:\xampp\htdocs\grundsolo\wp-content\plugins\woosidebars\classes\class-woo-sidebars.php:170
+Stack trace:
+#0 C:\xampp\htdocs\grundsolo\wp-content\plugins\woosidebars\classes\class-woo-sidebars.php(170): sprintf('Search %a', 'Widget Areas')
+#1 C:\xampp\htdocs\grundsolo\wp-includes\class-wp-hook.php(287): Woo_Sidebars->register_post_type('')
+#2 C:\xampp\htdocs\grundsolo\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\grundsolo\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\grundsolo\wp-settings.php(546): do_action('init')
+#5 C:\xampp\htdocs\grundsolo\wp-config.php(173): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\grundsolo\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\grundsolo\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\grundsolo\wp-admin\plugins.php(10): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+  thrown in C:\xampp\htdocs\grundsolo\wp-content\plugins\woosidebars\classes\class-woo-sidebars.php on line 170
+[17-Sep-2021 14:45:01 UTC] PHP Deprecated:  Required parameter $post follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-includes\functions.php on line 840
+[17-Sep-2021 14:45:02 UTC] PHP Warning:  Private methods cannot be final as they are never overridden by other classes in C:\xampp\htdocs\grundsolo\wp-includes\class-wp-session-tokens.php on line 69
+[17-Sep-2021 14:45:02 UTC] PHP Deprecated:  Required parameter $tt_id follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:45:02 UTC] PHP Deprecated:  Required parameter $taxonomy follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:45:02 UTC] PHP Deprecated:  Required parameter $block_attributes follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:45:02 UTC] PHP Deprecated:  Required parameter $block_content follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:45:02 UTC] PHP Deprecated:  Required parameter $plugin follows optional parameter $options in C:\xampp\htdocs\grundsolo\wp-content\plugins\cyrlitera\libs\factory\forms\includes\form.class.php on line 266
+[17-Sep-2021 14:45:03 UTC] PHP Deprecated:  Required parameter $total follows optional parameter $key in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\class-wc-cart-totals.php on line 542
+[17-Sep-2021 14:45:03 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Notices::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-notices.php on line 46
+[17-Sep-2021 14:45:03 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Path::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-path.php on line 57
+[17-Sep-2021 14:45:03 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Extensions::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-extensions.php on line 35
+[17-Sep-2021 14:45:03 UTC] PHP Warning:  The magic method Automattic\WooCommerce\Admin\FeaturePlugin::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\FeaturePlugin.php on line 314
+[17-Sep-2021 14:45:03 UTC] PHP Deprecated:  Required parameter $value follows optional parameter $address in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\class-wc-order.php on line 986
+[17-Sep-2021 14:45:03 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:45:03 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:45:03 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:45:03 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:45:03 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\tabs.php on line 3
+[17-Sep-2021 14:45:04 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\blog_posts.php on line 3
+[17-Sep-2021 14:45:04 UTC] PHP Deprecated:  Required parameter $code follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\google_maps.php on line 3
+[17-Sep-2021 14:45:04 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\portfolio.php on line 4
+[17-Sep-2021 14:45:04 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\ux_products.php on line 4
+[17-Sep-2021 14:45:04 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\ux_products_list.php on line 4
+[17-Sep-2021 14:45:04 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\product_flip.php on line 4
+[17-Sep-2021 14:45:04 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\product_categories.php on line 4
+[17-Sep-2021 14:45:04 UTC] PHP Deprecated:  Required parameter $post follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-includes\functions.php on line 840
+[17-Sep-2021 14:45:05 UTC] PHP Warning:  Private methods cannot be final as they are never overridden by other classes in C:\xampp\htdocs\grundsolo\wp-includes\class-wp-session-tokens.php on line 69
+[17-Sep-2021 14:45:05 UTC] PHP Deprecated:  Required parameter $tt_id follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:45:05 UTC] PHP Deprecated:  Required parameter $taxonomy follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:45:05 UTC] PHP Deprecated:  Required parameter $block_attributes follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:45:05 UTC] PHP Deprecated:  Required parameter $block_content follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:45:05 UTC] PHP Deprecated:  Required parameter $total follows optional parameter $key in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\class-wc-cart-totals.php on line 542
+[17-Sep-2021 14:45:05 UTC] PHP Deprecated:  Required parameter $term follows optional parameter $actions in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-taxonomies.php on line 390
+[17-Sep-2021 14:45:06 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Notices::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-notices.php on line 46
+[17-Sep-2021 14:45:06 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Path::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-path.php on line 57
+[17-Sep-2021 14:45:06 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Extensions::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-extensions.php on line 35
+[17-Sep-2021 14:45:06 UTC] PHP Warning:  The magic method Automattic\WooCommerce\Admin\FeaturePlugin::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\FeaturePlugin.php on line 314
+[17-Sep-2021 14:45:06 UTC] PHP Warning:  The magic method Automattic\WooCommerce\RestApi\Utilities\SingletonTrait::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\rest-api\Utilities\SingletonTrait.php on line 48
+[17-Sep-2021 14:45:06 UTC] PHP Deprecated:  Required parameter $value follows optional parameter $address in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\class-wc-order.php on line 986
+[17-Sep-2021 14:45:06 UTC] PHP Fatal error:  Uncaught ValueError: Unknown format specifier "a" in C:\xampp\htdocs\grundsolo\wp-content\plugins\woosidebars\classes\class-woo-sidebars.php:170
+Stack trace:
+#0 C:\xampp\htdocs\grundsolo\wp-content\plugins\woosidebars\classes\class-woo-sidebars.php(170): sprintf('Search %a', 'Widget Areas')
+#1 C:\xampp\htdocs\grundsolo\wp-includes\class-wp-hook.php(287): Woo_Sidebars->register_post_type('')
+#2 C:\xampp\htdocs\grundsolo\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\grundsolo\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\grundsolo\wp-settings.php(546): do_action('init')
+#5 C:\xampp\htdocs\grundsolo\wp-config.php(173): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\grundsolo\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\grundsolo\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\grundsolo\wp-admin\plugins.php(10): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+  thrown in C:\xampp\htdocs\grundsolo\wp-content\plugins\woosidebars\classes\class-woo-sidebars.php on line 170
+[17-Sep-2021 14:45:06 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:45:06 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:45:06 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:45:06 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:45:06 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\tabs.php on line 3
+[17-Sep-2021 14:45:06 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\blog_posts.php on line 3
+[17-Sep-2021 14:45:06 UTC] PHP Deprecated:  Required parameter $code follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\google_maps.php on line 3
+[17-Sep-2021 14:45:06 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\portfolio.php on line 4
+[17-Sep-2021 14:45:06 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\ux_products.php on line 4
+[17-Sep-2021 14:45:06 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\ux_products_list.php on line 4
+[17-Sep-2021 14:45:06 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\product_flip.php on line 4
+[17-Sep-2021 14:45:06 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\product_categories.php on line 4
+[17-Sep-2021 14:45:07 UTC] PHP Warning:  The magic method Automattic\WooCommerce\RestApi\Utilities\SingletonTrait::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\rest-api\Utilities\SingletonTrait.php on line 48
+[17-Sep-2021 14:45:07 UTC] PHP Deprecated:  Required parameter $post follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-includes\functions.php on line 840
+[17-Sep-2021 14:45:07 UTC] PHP Warning:  Private methods cannot be final as they are never overridden by other classes in C:\xampp\htdocs\grundsolo\wp-includes\class-wp-session-tokens.php on line 69
+[17-Sep-2021 14:45:07 UTC] PHP Deprecated:  Required parameter $tt_id follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:45:07 UTC] PHP Deprecated:  Required parameter $taxonomy follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:45:07 UTC] PHP Deprecated:  Required parameter $block_attributes follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:45:07 UTC] PHP Deprecated:  Required parameter $block_content follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:45:07 UTC] PHP Deprecated:  Required parameter $plugin follows optional parameter $options in C:\xampp\htdocs\grundsolo\wp-content\plugins\cyrlitera\libs\factory\forms\includes\form.class.php on line 266
+[17-Sep-2021 14:45:07 UTC] PHP Deprecated:  Required parameter $total follows optional parameter $key in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\class-wc-cart-totals.php on line 542
+[17-Sep-2021 14:45:07 UTC] PHP Deprecated:  Required parameter $value follows optional parameter $address in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\class-wc-customer.php on line 862
+[17-Sep-2021 14:45:07 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Notices::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-notices.php on line 46
+[17-Sep-2021 14:45:07 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Path::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-path.php on line 57
+[17-Sep-2021 14:45:07 UTC] PHP Warning:  The magic method HM\BackUpWordPress\Extensions::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\backupwordpress\classes\class-extensions.php on line 35
+[17-Sep-2021 14:45:08 UTC] PHP Warning:  The magic method Automattic\WooCommerce\Admin\FeaturePlugin::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\packages\woocommerce-admin\src\FeaturePlugin.php on line 314
+[17-Sep-2021 14:45:08 UTC] PHP Deprecated:  Required parameter $value follows optional parameter $address in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\class-wc-order.php on line 986
+[17-Sep-2021 14:45:08 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:45:08 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:45:08 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:45:08 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:45:08 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\tabs.php on line 3
+[17-Sep-2021 14:45:08 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\blog_posts.php on line 3
+[17-Sep-2021 14:45:08 UTC] PHP Deprecated:  Required parameter $code follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\google_maps.php on line 3
+[17-Sep-2021 14:45:08 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\portfolio.php on line 4
+[17-Sep-2021 14:45:08 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\ux_products.php on line 4
+[17-Sep-2021 14:45:08 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\ux_products_list.php on line 4
+[17-Sep-2021 14:45:08 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\product_flip.php on line 4
+[17-Sep-2021 14:45:08 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\product_categories.php on line 4
+[17-Sep-2021 14:45:08 UTC] PHP Deprecated:  Required parameter $term follows optional parameter $actions in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\admin\class-wc-admin-taxonomies.php on line 390
+[17-Sep-2021 14:45:08 UTC] PHP Warning:  The magic method Automattic\WooCommerce\RestApi\Utilities\SingletonTrait::__wakeup() must have public visibility in C:\xampp\htdocs\grundsolo\wp-content\plugins\woocommerce\includes\rest-api\Utilities\SingletonTrait.php on line 48
