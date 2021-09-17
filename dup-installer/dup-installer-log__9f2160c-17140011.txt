@@ -1,0 +1,1854 @@
+********************************************************************************
+* DUPLICATOR-PRO: Install-Log
+* STEP-1 START @ 02:03:52
+* VERSION: 1.4.3
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+PACKAGE INFO________ CURRENT SERVER                         |ORIGINAL SERVER
+PHP VERSION_________: 7.4.23                                |8.0.10
+OS__________________: Linux                                 |WINNT
+CREATED_____________: 2021-09-17 14:00:11
+WP VERSION__________: 5.5.6
+DUP VERSION_________: 1.4.3
+DB__________________: 5.7.31
+DB TABLES___________: 50
+DB ROWS_____________: 4,272
+DB FILE SIZE________: 19.75MB
+********************************************************************************
+SERVER INFO
+PHP_________________: 8.0.10 | SAPI: apache2handler
+PHP MEMORY__________: 4294967296 | SUHOSIN: disabled
+SERVER______________: Apache/2.4.48 (Win64) OpenSSL/1.1.1l PHP/8.0.10
+DOC ROOT____________: "C:/xampp/htdocs/grundsolo"
+DOC ROOT 755________: true
+LOG FILE 644________: true
+REQUEST URL_________: "http://localhost/grundsolo/dup-installer/main.installer.php"
+********************************************************************************
+USER INPUTS
+ARCHIVE ACTION______: "donothing"
+ARCHIVE ENGINE______: "ziparchive"
+SET DIR PERMS_______: 0
+DIR PERMS VALUE_____: 644
+SET FILE PERMS______: 0
+FILE PERMS VALUE____: 755
+SAFE MODE___________: "0"
+LOGGING_____________: "1"
+CONFIG MODE_________: "NEW"
+FILE TIME___________: "current"
+********************************************************************************
+
+
+--------------------------------------
+ARCHIVE SETUP
+--------------------------------------
+NAME________________: "C:/xampp/htdocs/grundsolo/20201118_grundfos_[HASH]_20210917140011_archive.zip"
+SIZE________________: 74.92MB
+
+PRE-EXTRACT-CHECKS
+- PASS: Apache '.htaccess' not found - no backup needed.
+- PASS: Microsoft IIS 'web.config' not found - no backup needed.
+- PASS: WordFence '.user.ini' not found - no backup needed.
+BEFORE EXTRACION ACTIONS
+MAINTENANCE MODE ENABLE
+
+
+START ZIP FILE EXTRACTION STANDARD >>> 
+
+--------------------------------------
+ARCHIVE SETUP
+--------------------------------------
+NAME________________: "C:/xampp/htdocs/grundsolo/20201118_grundfos_[HASH]_20210917140011_archive.zip"
+SIZE________________: 74.92MBFile timestamp set to Current: 2021-09-17 14:04:48
+<<< ZipArchive Unzip Complete: true
+--------------------------------------
+POST-EXTACT-CHECKS
+--------------------------------------
+
+PERMISSION UPDATES: None Applied
+
+STEP-1 COMPLETE @ 02:04:48 - RUNTIME: 56.2042 sec.
+[PHP ERR][WARN] MSG:mysqli_connect(): (HY000/1045): Access denied for user 'AdminOleg'@'localhost' (using password: YES) [CODE:2|FILE:C:\xampp\htdocs\grundsolo\dup-installer\classes\class.db.php|LINE:48]
+DATABASE CONNECTION ERROR: Access denied for user 'AdminOleg'@'localhost' (using password: YES)[ERRNO:1045]
+
+
+
+********************************************************************************
+* DUPLICATOR-LITE INSTALL-LOG
+* STEP-2 START @ 02:05:53
+* NOTICE: Do NOT post to public sites or forums!!
+********************************************************************************
+USER INPUTS
+VIEW MODE___________: "basic"
+DB ACTION___________: "empty"
+DB HOST_____________: "**OBSCURED**"
+DB NAME_____________: "**OBSCURED**"
+DB PASS_____________: "**OBSCURED**"
+DB PORT_____________: "**OBSCURED**"
+NON-BREAKING SPACES_: true
+MYSQL MODE__________: "DEFAULT"
+MYSQL MODE OPTS_____: ""
+CHARSET_____________: "utf8"
+COLLATE_____________: "utf8_general_ci"
+COLLATE FB__________: true
+VIEW CREATION_______: true
+STORED PROCEDURE____: true
+FUNCTION CREATION___: true
+********************************************************************************
+
+--------------------------------------
+DATABASE-ENVIRONMENT
+--------------------------------------
+MYSQL VERSION:	This Server: 10.4.21 -- Build Server: 5.7.31
+FILE SIZE:	dup-database__[HASH].sql (11.69MB)
+TIMEOUT:	5000
+MAXPACK:	1048576
+SQLMODE:	NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION
+NEW SQL FILE:	[C:/xampp/htdocs/grundsolo/dup-installer/dup-installer-data__[HASH].sql]
+COLLATE FB:	On
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+ran fix non-breaking space characters
+
+DB VIEWS:	enabled
+DB PROCEDURES:	enabled
+DB FUNCTIONS:	enabled
+ERRORS FOUND:	0
+DROPPED TABLES:	0
+RENAMED TABLES:	0
+QUERIES RAN:	467
+
+wp_actionscheduler_actions: (0)
+wp_actionscheduler_claims: (0)
+wp_actionscheduler_groups: (2)
+wp_actionscheduler_logs: (0)
+wp_commentmeta: (0)
+wp_comments: (15)
+wp_duplicator_packages: (0)
+wp_links: (0)
+wp_options: (504)
+wp_postmeta: (1416)
+wp_posts: (728)
+wp_social_users: (0)
+wp_term_relationships: (198)
+wp_term_taxonomy: (105)
+wp_termmeta: (121)
+wp_terms: (105)
+wp_usermeta: (188)
+wp_users: (5)
+wp_wc_admin_note_actions: (20)
+wp_wc_admin_notes: (18)
+wp_wc_category_lookup: (12)
+wp_wc_customer_lookup: (17)
+wp_wc_download_log: (0)
+wp_wc_order_coupon_lookup: (0)
+wp_wc_order_product_lookup: (15)
+wp_wc_order_stats: (15)
+wp_wc_order_tax_lookup: (0)
+wp_wc_product_meta_lookup: (9)
+wp_wc_reserved_stock: (0)
+wp_wc_tax_rate_classes: (4)
+wp_wc_webhooks: (0)
+wp_woocommerce_api_keys: (0)
+wp_woocommerce_attribute_taxonomies: (22)
+wp_woocommerce_downloadable_product_permissions: (0)
+wp_woocommerce_log: (0)
+wp_woocommerce_order_itemmeta: (189)
+wp_woocommerce_order_items: (24)
+wp_woocommerce_payment_tokenmeta: (0)
+wp_woocommerce_payment_tokens: (0)
+wp_woocommerce_sessions: (3)
+wp_woocommerce_shipping_zone_locations: (0)
+wp_woocommerce_shipping_zone_methods: (3)
+wp_woocommerce_shipping_zones: (1)
+wp_woocommerce_tax_rate_locations: (0)
+wp_woocommerce_tax_rates: (0)
+wp_yoast_indexable: (255)
+wp_yoast_indexable_hierarchy: (24)
+wp_yoast_migrations: (18)
+wp_yoast_primary_term: (5)
+wp_yoast_seo_links: (482)
+Removed '146' cache/transient rows
+
+INSERT DATA RUNTIME: 2.1286 sec.
+STEP-2 COMPLETE @ 02:05:55 - RUNTIME: 2.1455 sec.
+
+====================================
+SET SEARCH AND REPLACE LIST
+====================================
+
+
+********************************************************************************
+DUPLICATOR PRO INSTALL-LOG
+STEP-3 START @ 02:06:58
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	"utf8"
+CHARSET CLIENT:	"utf8"
+********************************************************************************
+OPTIONS:
+blogname______________: "GRUNDFOS"
+postguid______________: false
+fullsearch____________: true
+path_old______________: "/home/f0439742/domains/grundsolo.ru/public_html"
+path_new______________: "C:/xampp/htdocs/grundsolo"
+siteurl_______________: "http://localhost/grundsolo"
+url_old_______________: "https://grundsolo.ru"
+url_new_______________: "http://localhost/grundsolo"
+maxSerializeStrlen____: 4000000
+replaceMail___________: true
+dbcharset_____________: "utf8"
+dbcollate_____________: "utf8_general_ci"
+wp_mail_______________: "oleghasanov999@gmail.com"
+wp_nickname___________: "oleg"
+wp_first_name_________: "oleg"
+wp_last_name__________: "oleg"
+ssl_admin_____________: false
+cache_wp______________: false
+cache_path____________: false
+exe_safe_mode_________: false
+config_mode___________: "NEW"
+********************************************************************************
+
+
+====================================
+RUN SEARCH AND REPLACE
+====================================
+
+EVALUATE TABLE: "wp_actionscheduler_actions"______________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_actionscheduler_claims"_______________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_actionscheduler_groups"_______________________[ROWS:     2][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_actionscheduler_logs"_________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_commentmeta"__________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_comments"_____________________________________[ROWS:    15][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_duplicator_packages"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_links"________________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_options"______________________________________[ROWS:   504][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_postmeta"_____________________________________[ROWS:  1416][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_posts"________________________________________[ROWS:   728][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_social_users"_________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_term_relationships"___________________________[ROWS:   198][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_term_taxonomy"________________________________[ROWS:   105][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_termmeta"_____________________________________[ROWS:   121][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_terms"________________________________________[ROWS:   105][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_usermeta"_____________________________________[ROWS:   188][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_users"________________________________________[ROWS:     5][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_wc_admin_note_actions"________________________[ROWS:    20][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_wc_admin_notes"_______________________________[ROWS:    18][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_wc_category_lookup"___________________________[ROWS:    12][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_wc_customer_lookup"___________________________[ROWS:    17][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_wc_download_log"______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_wc_order_coupon_lookup"_______________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_wc_order_product_lookup"______________________[ROWS:    15][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_wc_order_stats"_______________________________[ROWS:    15][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_wc_order_tax_lookup"__________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_wc_product_meta_lookup"_______________________[ROWS:     9][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_wc_reserved_stock"____________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_wc_tax_rate_classes"__________________________[ROWS:     4][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_wc_webhooks"__________________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_woocommerce_api_keys"_________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_woocommerce_attribute_taxonomies"_____________[ROWS:    22][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_woocommerce_downloadable_product_permissions"_[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_woocommerce_log"______________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_woocommerce_order_itemmeta"___________________[ROWS:   189][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_woocommerce_order_items"______________________[ROWS:    24][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_woocommerce_payment_tokenmeta"________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_woocommerce_payment_tokens"___________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_woocommerce_sessions"_________________________[ROWS:     3][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_woocommerce_shipping_zone_locations"__________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_woocommerce_shipping_zone_methods"____________[ROWS:     3][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_woocommerce_shipping_zones"___________________[ROWS:     1][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_woocommerce_tax_rate_locations"_______________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_woocommerce_tax_rates"________________________[ROWS:     0][PG:   0][SCAN:no columns  ]
+
+EVALUATE TABLE: "wp_yoast_indexable"______________________________[ROWS:   255][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_yoast_indexable_hierarchy"____________________[ROWS:    24][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_yoast_migrations"_____________________________[ROWS:    18][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_yoast_primary_term"___________________________[ROWS:     5][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+
+EVALUATE TABLE: "wp_yoast_seo_links"______________________________[ROWS:   482][PG:   1][SCAN:every column]
+	SEARCH  1:"/home/f0439742/domains/grundsolo.ru/public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  2:"\/home\/f0439742\/domains\/grundsolo.ru\/public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  3:"%2Fhome%2Ff0439742%2Fdomains%2Fgrundsolo.ru%2Fpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  4:"\home\f0439742\domains\grundsolo.ru\public_html" => "C:/xampp/htdocs/grundsolo"
+	SEARCH  5:"\\home\\f0439742\\domains\\grundsolo.ru\\public_html" => "C:\/xampp\/htdocs\/grundsolo"
+	SEARCH  6:"%5Chome%5Cf0439742%5Cdomains%5Cgrundsolo.ru%5Cpublic_html" => "C%3A%2Fxampp%2Fhtdocs%2Fgrundsolo"
+	SEARCH  7:"//grundsolo.ru" ==================================> "//localhost/grundsolo"
+	SEARCH  8:"\/\/grundsolo.ru" ================================> "\/\/localhost\/grundsolo"
+	SEARCH  9:"%2F%2Fgrundsolo.ru" ==============================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 10:"//www.grundsolo.ru" ==============================> "//localhost/grundsolo"
+	SEARCH 11:"\/\/www.grundsolo.ru" ============================> "\/\/localhost\/grundsolo"
+	SEARCH 12:"%2F%2Fwww.grundsolo.ru" ==========================> "%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 13:"https://localhost/grundsolo" =====================> "http://localhost/grundsolo"
+	SEARCH 14:"https:\/\/localhost\/grundsolo" ==================> "http:\/\/localhost\/grundsolo"
+	SEARCH 15:"https%3A%2F%2Flocalhost%2Fgrundsolo" =============> "http%3A%2F%2Flocalhost%2Fgrundsolo"
+	SEARCH 16:"@grundsolo.ru" ===================================> "@localhost"
+	SEARCH 17:"%40grundsolo.ru" =================================> "%40localhost"
+--------------------------------------
+SCANNED:	Tables:50 	|	 Rows:4523 	|	 Cells:47977 
+UPDATED:	Tables:10 	|	 Rows:1485 	|	 Cells:2022 
+ERRORS:		0 
+RUNTIME:	0.864000 sec
+
+====================================
+REMOVE LICENSE KEY
+====================================
+
+====================================
+CREATE NEW ADMIN USER
+====================================
+
+NEW WP-ADMIN USER:
+- New username 'AdminOleg' was created successfully allong with MU usermeta.
+
+====================================
+CONFIGURATION FILE UPDATES
+====================================
+	UPDATE DB_NAME "** OBSCURED **"
+	UPDATE DB_USER "** OBSCURED **"
+	UPDATE DB_PASSWORD "** OBSCURED **"
+	UPDATE DB_HOST ""localhost""
+	REMOVE WPCACHEHOME
+	
+*** UPDATED WP CONFIG FILE ***
+
+====================================
+HTACCESS UPDATE MODE: "NEW"
+====================================
+- PASS: Successfully created a new .htaccess file.
+- PASS: Existing Apache '.htaccess__[HASH]' was removed
+
+====================================
+GENERAL UPDATES & CLEANUP
+====================================
+
+====================================
+DEACTIVATE PLUGINS CHECK
+====================================
+Deactivated plugins list here: Array
+(
+    [0] => really-simple-ssl/rlrsssl-really-simple-ssl.php
+    [1] => simple-google-recaptcha/simple-google-recaptcha.php
+    [2] => js_composer/js_composer.php
+)
+
+deactivate really-simple-ssl/rlrsssl-really-simple-ssl.php
+Plugin(s) listed here are deactivated: really-simple-ssl/rlrsssl-really-simple-ssl.php
+MAINTENANCE MODE DISABLE
+
+====================================
+NOTICES TEST
+====================================
+No General Notices Found
+
+
+====================================
+CLEANUP TMP FILES
+====================================
+
+====================================
+FINAL REPORT NOTICES
+====================================
+
+STEP-3 COMPLETE @ 02:06:59 - RUNTIME: 0.9690 sec. 
+
+
+====================================
+FINAL REPORT NOTICES LIST
+====================================
+-----------------------
+[INFO] Info
+	SECTIONS: general
+	LONG MSG:             The following is a list of notices that may need to be fixed in order to finalize your setup. These values should only be investigated if you're running into
+            issues with your site. For more details see the <a href="https://codex.wordpress.org/Editing_wp-config.php" target="_blank">WordPress Codex</a>.
+
+-----------------------
+[INFO] No errors in database
+	SECTIONS: database
+
+-----------------------
+[INFO] No search and replace data errors
+	SECTIONS: search_replace
+
+-----------------------
+[INFO] No files extraction errors
+	SECTIONS: files
+
+-----------------------
+[WARNING] Deactivated Plugin:  Really Simple SSL
+	SECTIONS: general
+	LONG MSG: This plugin has been deactivated since this migration is going from SSL (HTTPS) to Non-SSL (HTTP).  This will allow you to login to your WordPress Admin.   To reactivate the plugin please go to the admin plugin page.
+
+====================================

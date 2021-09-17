@@ -1,0 +1,521 @@
+# Translation of Plugins - Currency per Product for WooCommerce - Development (trunk) in Russian
+# This file is distributed under the same license as the Plugins - Currency per Product for WooCommerce - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-08-14 14:43:13+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Currency per Product for WooCommerce - Development (trunk)\n"
+
+#. Author URI of the plugin
+msgid "https://www.tychesoftwares.com/"
+msgstr "https://www.tychesoftwares.com/"
+
+#. Author of the plugin
+msgid "Tyche Softwares"
+msgstr "Tyche Softwares"
+
+#. Plugin URI of the plugin
+msgid "https://www.tychesoftwares.com/store/premium-plugins/currency-per-product-for-woocommerce/"
+msgstr "https://www.tychesoftwares.com/store/premium-plugins/currency-per-product-for-woocommerce/"
+
+#. translators: %1$s: Price range from, %2$s: Price range to
+#: includes/class-alg-wc-cpp-core.php:320
+#: includes/class-alg-wc-cpp-core.php:323
+msgctxt "Price range: from-to"
+msgid "%1$s &ndash; %2$s"
+msgstr "%1$s – %2$s"
+
+#: includes/settings/class-alg-wc-cpp-settings-general.php:88
+msgid "Currency symbol template."
+msgstr "Шаблон символа валюты."
+
+#: includes/settings/class-alg-wc-cpp-settings-general.php:82
+msgid "This will change currency symbol (frontend & backend) according to the template below."
+msgstr "Это изменит символ валюты (внешнем и внутреннем интерфейсе) в соответствии с шаблоном ниже."
+
+#: includes/settings/class-alg-wc-cpp-settings-general.php:80
+msgid "Custom currency symbol"
+msgstr "Пользовательский символ валюты"
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:135
+msgid "free"
+msgstr "Бесплатно"
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:105
+msgid "product tags"
+msgstr "Метки товара"
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:94
+msgid "product categories"
+msgstr "Категории товаров"
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:33
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:125
+msgid "Currencies"
+msgstr "Валюты"
+
+#. translators: %s: %currency_code%, %currency_symbol%
+#. translators: %s: %price%, %price_raw%, %currency_code%
+#: includes/settings/class-alg-wc-cpp-settings-general.php:90
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:78
+msgid "Replaced values: %s."
+msgstr "Замененные значения: %s."
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:119
+msgid "Are you sure?"
+msgstr "Вы уверены?"
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:95
+msgid "Description"
+msgstr "Описание"
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:92
+msgid "Tools"
+msgstr "Инструменты"
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:33
+msgid "Advanced"
+msgstr "Дополнительно"
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:84
+msgid "WooCommerce > Settings > Currency per Product > Advanced"
+msgstr "WooCommerce > Настройки > Валюта за товар > Продвинутый"
+
+#. translators: %s: Advanced section link
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:82
+msgid "\"Sorting by converted price\" or \"Filtering by converted price\" option is enabled in %s."
+msgstr "Параметр «Сортировка по конвертированной цене» или «Фильтрация по конвертированной цене» включен в %s."
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:76
+msgid "WooCommerce > Settings > Currency per Product > Behaviour"
+msgstr "WooCommerce > Настройки > Валюта за товар > Поведение"
+
+#. translators: %s: Behaviour section link
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:74
+msgid "at least one of the behaviour options in %s is set to one of \"Convert to ...\" options, or"
+msgstr "по крайней мере, один из параметров поведения в %s установлен на один из параметров «Преобразовать в ...», или"
+
+#. translators: %s: description text
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:69
+msgid "Exchange rates for currencies <strong>will be ignored unless</strong>: %s"
+msgstr "Обменные курсы для валют <strong>будут игнорироваться, если</strong>: %s"
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:66
+msgid "Exchange Rates Options"
+msgstr "Настройки курсов валют"
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:54
+msgid "Update rates now"
+msgstr "Обновить курсы сейчас"
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:135
+msgid "All Currencies for WooCommerce"
+msgstr "Все валюты для WooCommerce"
+
+#. translators: %s: All Currencies for WooCommerce plugin
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:133
+msgid "If you are missing some currencies (or cryptocurrencies) in the currencies list below - we suggest checking %s plugin."
+msgstr "Если вам не хватает некоторых валют (или криптовалют) в списке валют ниже - мы рекомендуем проверить плагин %s."
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:83
+msgid "product authors user roles"
+msgstr "пользовательские роли авторов товара "
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:72
+msgid "product authors"
+msgstr "авторы товара"
+
+#. translators: %s: set currency per product author
+#. translators: %s: set currency per author user role
+#. translators: %s: set currency per product category
+#. translators: %s: set currency per product tags
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:71
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:82
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:93
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:104
+msgid "Currency per %s"
+msgstr "Валюта за %s"
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:48
+msgid "Click \"Save changes\" button after changing options in this subsection to see new settings fields."
+msgstr "Нажмите кнопку «Сохранить изменения» после изменения параметров в этом подразделе, чтобы увидеть новые поля настроек."
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:75
+msgid "Original price template"
+msgstr "Шаблон начальной цены"
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:69
+msgid "Ignored, if \"Shop behaviour\" option is set to \"Show prices in different currencies ...\"."
+msgstr "Игнорируется, если для параметра «Поведение магазина» установлено значение «Показывать цены в разных валютах ...»."
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:68
+msgid "This will add original (i.e. not converted) price display to shop pages (and admin products list), in case if product price was converted."
+msgstr "Это добавит отображение оригинальной (т.е. не преобразованной) цены на страницы магазина (и список товаров администратора) в случае, если цена товара была конвертирована."
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:66
+msgid "Add original price in shop"
+msgstr "Добавить оригинальную цену в магазине"
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:33
+msgid "Behaviour"
+msgstr "Поведение"
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:130
+msgid "There is no undo action, so please be careful."
+msgstr "Отмены действий нет, поэтому, пожалуйста, будьте осторожны."
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:129
+msgid "This will delete all plugin's data, i.e. all plugin's options and products meta."
+msgstr "Это удалит все данные плагина, то есть все параметры плагина и метаданные товаров."
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:128
+msgid "Delete all plugin's data"
+msgstr "Удалить все данные плагина"
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:112
+msgid "However you can also do this manually by pressing the button."
+msgstr "Однако вы также можете сделать это вручную, нажав кнопку."
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:110
+msgid "Re-calculates (i.e. converts) and saves all products prices for use in \"Sort by price\" sorting and \"Filter Products by Price\" widget."
+msgstr "Пересчитывает (то есть конвертирует) и сохраняет все цены на товары для использования в сортировке «Сортировать по цене» и виджете «Фильтровать товары по цене»."
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:109
+msgid "Re-calculate prices"
+msgstr "Пересчитать цены"
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:95
+msgid "Tool"
+msgstr "Инструмент"
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:74
+msgid "Enable this option if you want to use converted prices in WooCommerce \"Filter Products by Price\" widget."
+msgstr "Включите эту опцию, если хотите использовать конвертированные цены в виджете WooCommerce «Фильтр товаров по цене»."
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:72
+msgid "Filtering by converted price"
+msgstr "Фильтрация по конвертированной цене"
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:66
+msgid "Enable this option if you want to use converted prices in WooCommerce \"Sort by price\" sorting."
+msgstr "Включите эту опцию, если хотите использовать конвертированные цены в сортировке WooCommerce \"Сортировать по цене\"."
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:64
+msgid "Sorting by converted price"
+msgstr "Сортировать по конвертированной цене"
+
+#: includes/class-alg-wc-cpp-admin.php:122
+#: includes/class-alg-wc-cpp-admin.php:175
+msgid "User role or nonce is not valid!"
+msgstr "Роль пользователя или одноразовый номер недействительны!"
+
+#. translators: %s: number of products for which price was re-calculated
+#: includes/class-alg-wc-cpp-admin.php:63
+msgid "Prices successfully re-calculated for %s products."
+msgstr "Цены успешно пересчитаны для %s товаров."
+
+#: includes/settings/class-alg-wc-cpp-settings-general.php:67
+msgid "General Options"
+msgstr "Основные настройки"
+
+#: includes/functions/alg-wc-cpp-exchange-rates-functions.php:68
+msgid "Free Currency Converter API (free.currencyconverterapi.com)"
+msgstr "API бесплатного конвертора валют (free.currencyconverterapi.com)"
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:82
+msgid "Enable this option if you have compatibility issues with other plugins. It will ensure that prices are converted only once."
+msgstr "Включите эту опцию, если у вас есть проблемы совместимости с другими плагинами. Это обеспечит конвертацию цен только один раз."
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:80
+msgid "Save products prices"
+msgstr "Сохранить цены товаров"
+
+#: includes/settings/class-alg-wc-settings-cpp.php:89
+msgid "Reset section settings"
+msgstr "Сбросить настройки раздела"
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:51
+msgid "Advanced Options"
+msgstr "Расширенные настройки"
+
+#: includes/class-alg-wc-cpp-currency-reports.php:103
+msgid "Merge all"
+msgstr "Объединить все"
+
+#. translators: %s: Currency
+#: includes/class-alg-wc-cpp-currency-reports.php:65
+msgid "Reports currency: %s"
+msgstr "Отчеты валюты: %s"
+
+#: includes/class-alg-wc-cpp-currency-reports.php:63
+msgid "All currencies"
+msgstr "Все валюты"
+
+#. translators: %s: Show reports in which form
+#: includes/class-alg-wc-cpp-currency-reports.php:50
+msgid "Show reports only in %s"
+msgstr "Показывать отчеты только в %s"
+
+#: includes/class-alg-wc-cpp-currency-reports.php:48
+msgid "Merge all currencies"
+msgstr "Объединить все валюты"
+
+#: includes/settings/class-alg-wc-cpp-settings-general.php:74
+msgid "This will add currency selection to admin bar in reports."
+msgstr "Это добавит выбор валюты в админ-панели в отчетах."
+
+#: includes/settings/class-alg-wc-cpp-settings-general.php:72
+msgid "Currency reports"
+msgstr "Отчеты валюты"
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:58
+msgid "Enable this option if you have issues with currency symbol in mini cart. It will recalculate cart totals on each page load."
+msgstr "Включите эту опцию, если у вас есть проблемы с символом валюты в мини-корзине. Он будет пересчитывать итоги корзины при каждой загрузке страницы."
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:56
+msgid "Fix mini cart"
+msgstr "Исправить мини-корзину"
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:101
+msgid "This option is ignored and always set to \"Convert to shop default currency\", if you selected \"Convert to shop default currency\" as \"Shop Behaviour\" option."
+msgstr "Этот параметр игнорируется и всегда имеет значение «Преобразовать в валюту магазина по умолчанию», если вы выбрали «Преобразовать в валюту магазина по умолчанию» в качестве параметра «Поведение магазина»."
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:62
+msgid "Convert to shop default currency (including cart and checkout)"
+msgstr "Преобразовать в валюту магазина по умолчанию (включая корзину и оформление заказа)"
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:61
+msgid "Show prices in different currencies (and set cart and checkout behaviour separately)"
+msgstr "Показывать цены в разных валютах (и настроить поведение корзины и оформления заказа отдельно)"
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:55
+msgid "Shop behaviour"
+msgstr "Поведение магазина"
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:50
+msgid "Shop Behaviour Options"
+msgstr "Настройки поведения магазина"
+
+#: includes/functions/alg-wc-cpp-functions.php:158
+msgid "Guest"
+msgstr "Гость"
+
+#: includes/settings/class-alg-wc-settings-cpp.php:90
+msgid "Reset"
+msgstr "Сбросить"
+
+#: includes/settings/class-alg-wc-settings-cpp.php:84
+msgid "Reset Settings"
+msgstr "Восстановить значения по умолчанию"
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:221
+msgid "Product tags"
+msgstr "Метки товара"
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:206
+msgid "Product categories"
+msgstr "Категории товаров"
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:179
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:194
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:142
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:162
+msgid "Currency"
+msgstr "Валюта"
+
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:57
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:65
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:73
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:81
+#: includes/settings/class-alg-wc-cpp-settings-general.php:73
+#: includes/settings/class-alg-wc-cpp-settings-general.php:81
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:67
+msgid "Enable"
+msgstr "Включить"
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:115
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:123
+msgid "Message"
+msgstr "Сообщение"
+
+#: includes/settings/class-alg-wc-cpp-settings-general.php:53
+msgid "Enable plugin"
+msgstr "Включить плагин"
+
+#: includes/settings/class-alg-wc-cpp-settings-general.php:33
+msgid "General"
+msgstr "Общие"
+
+#: currency-per-product-for-woocommerce.php:142
+msgid "Unlock All"
+msgstr "Разблокировать все"
+
+#: currency-per-product-for-woocommerce.php:139
+msgid "Settings"
+msgstr "Настройки"
+
+#. translators: %1$s: Price range from, %2$s: Price range to
+#: includes/class-alg-wc-cpp-core.php:622
+msgctxt "Price range: from-to"
+msgid "%1$s&ndash;%2$s"
+msgstr "%1$s&ndash;%2$s"
+
+#: includes/functions/alg-wc-cpp-exchange-rates-functions.php:67
+msgid "TCMB"
+msgstr "TCMB"
+
+#: includes/functions/alg-wc-cpp-exchange-rates-functions.php:66
+msgid "European Central Bank (ECB)"
+msgstr "Европейский центральный банк (ECB)"
+
+#. Description of the plugin
+#: includes/settings/class-alg-wc-cpp-settings-general.php:54
+msgid "Set and display prices for WooCommerce products in different currencies."
+msgstr "Установите и отобразите цены на товары WooCommerce в разных валютах."
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:191
+msgid "Product authors user roles"
+msgstr "Роли пользователей авторов товара"
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:176
+msgid "Product authors"
+msgstr "Авторы товара"
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:33
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:173
+msgid "Exchange Rates"
+msgstr "Курсы валют"
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:53
+msgid "Total currencies"
+msgstr "Все валюты"
+
+#. translators: %s: currency code
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:128
+msgid "Your shop base currency %s will be automatically added to the currencies list on product edit page, so you <strong>don't need</strong> to add it to the list below."
+msgstr "Базовая валюта вашего магазина %s будет автоматически добавлена в список валют на странице редактирования товара, поэтому вам <strong>не нужно</strong> добавлять ее в список ниже."
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:47
+msgid "Currencies Options"
+msgstr "Настройки валют"
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:143
+msgid "Update server"
+msgstr "Обновить сервер"
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:126
+msgid "Update Daily"
+msgstr "Обновлять ежедневно"
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:125
+msgid "Update Twice Daily"
+msgstr "Обновлять дважды в день"
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:124
+msgid "Update Hourly"
+msgstr "Обновлять ежечасно"
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:118
+msgid "Update rate"
+msgstr "Частота обновления"
+
+#. translators: %s: pro plugin link
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:107
+msgid "To enable automatic exchange rates, please get <a target=\"_blank\" href=\"%s\">Currency per Product for WooCommerce Pro</a> plugin."
+msgstr "Чтобы включить автоматический обменный курс, установите плагин <a target=\"_blank\" href=\"%s\">Currency per Product for WooCommerce Pro</a>."
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:101
+msgid "Update rates automatically"
+msgstr "Обновлять курсы автоматически"
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:100
+msgid "Enter rates manually"
+msgstr "Ввести курсы вручную"
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:94
+msgid "Possible values: Enter rates manually; Update rates automatically."
+msgstr "Возможные значения: Ввести курсы вручную; Обновлять курсы автоматически."
+
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:93
+msgid "Exchange rates updates"
+msgstr "Обновление курсов валют"
+
+#. translators: %s: difference from $_time until current_time, e.g "1 hour", "5
+#. mins", "2 days"
+#. translators: %s: time difference, like "1 hour" "50 minutes" "2 days" & so
+#. on.
+#: includes/settings/class-alg-wc-cpp-settings-advanced.php:116
+#: includes/settings/class-alg-wc-cpp-settings-exchange-rates.php:59
+msgid "%s until next update"
+msgstr "%s до следующего обновления"
+
+#: includes/settings/class-alg-wc-cpp-settings-currencies.php:68
+msgid "Additional options"
+msgstr "Дополнительные настройки"
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:125
+#: includes/class-alg-wc-cpp-core.php:573
+msgid "Only products with same currency can be added to the cart. Clear the cart or finish the order, before adding products with another currency to the cart."
+msgstr "Только товары с одинаковой валютой могут быть добавлены в корзину. Очистите корзину или завершите заказ, прежде чем добавлять в корзину товары с другой валютой."
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:117
+#: includes/class-alg-wc-cpp-core.php:550
+msgid "Only one product can be added to the cart. Clear the cart or finish the order, before adding another product to the cart."
+msgstr "В корзину можно добавить только один товар. Очистите корзину или завершите заказ, прежде чем добавлять другой товар в корзину."
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:111
+msgid "Convert to currency of first product in cart"
+msgstr "Конвертировать в валюту первого товара в корзине"
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:110
+msgid "Convert to currency of last product in cart"
+msgstr "Конвертировать в валюту последнего товара в корзине"
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:109
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:123
+msgid "Leave product currency (allow only same currency products to be added to cart)"
+msgstr "Оставить валюту товара (разрешить добавление в корзину только товаров той же валюты)"
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:108
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:115
+msgid "Leave product currency (allow only one product to be added to cart)"
+msgstr "Оставить валюту товара (разрешить добавление в корзину только одного товара)"
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:107
+msgid "Convert to shop default currency"
+msgstr "Конвертировать в валюту магазина по умолчанию"
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:100
+msgid "Cart and checkout behaviour"
+msgstr "Поведение корзины и оформления заказа"
+
+#: includes/settings/class-alg-wc-cpp-settings-behaviour.php:95
+msgid "Cart and Checkout Behaviour Options"
+msgstr "Варианты поведения корзины и оформления заказа"
+
+#. Plugin Name of the plugin
+#: includes/settings/class-alg-wc-cpp-settings-general.php:52
+msgid "Currency per Product for WooCommerce"
+msgstr "Currency per Product for WooCommerce"
+
+#: includes/settings/class-alg-wc-cpp-settings-general.php:47
+msgid "Currency per Product Options"
+msgstr "Валюта для вариантов товара"
+
+#: includes/settings/class-alg-wc-cpp-metaboxes.php:201
+msgid "Update product after you change this field's value."
+msgstr "Обновите товар после изменения значения этого поля."
+
+#: includes/settings/class-alg-wc-cpp-metaboxes.php:200
+msgid "Product currency"
+msgstr "Валюта товара"
+
+#: includes/settings/class-alg-wc-cpp-metaboxes.php:45
+#: includes/settings/class-alg-wc-settings-cpp.php:33
+msgid "Currency per Product"
+msgstr "Валюта за товар"
