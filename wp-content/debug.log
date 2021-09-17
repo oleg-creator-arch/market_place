@@ -1364,3 +1364,45 @@ Stack trace:
 [17-Sep-2021 14:20:01 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\blog_posts.php on line 3
 [17-Sep-2021 14:20:01 UTC] PHP Deprecated:  Required parameter $code follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\google_maps.php on line 3
 [17-Sep-2021 14:20:01 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\portfolio.php on line 4
+[17-Sep-2021 14:22:00 UTC] PHP Deprecated:  Required parameter $post follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-includes\functions.php on line 840
+[17-Sep-2021 14:22:00 UTC] PHP Warning:  Private methods cannot be final as they are never overridden by other classes in C:\xampp\htdocs\grundsolo\wp-includes\class-wp-session-tokens.php on line 69
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $tt_id follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $taxonomy follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $block_attributes follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $block_content follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\tabs.php on line 3
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\blog_posts.php on line 3
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $code follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\google_maps.php on line 3
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\portfolio.php on line 4
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $post follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-includes\functions.php on line 840
+[17-Sep-2021 14:22:01 UTC] PHP Warning:  Private methods cannot be final as they are never overridden by other classes in C:\xampp\htdocs\grundsolo\wp-includes\class-wp-session-tokens.php on line 69
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $tt_id follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $taxonomy follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $block_attributes follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $block_content follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\tabs.php on line 3
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\blog_posts.php on line 3
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $code follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\google_maps.php on line 3
+[17-Sep-2021 14:22:01 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\portfolio.php on line 4
+[17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $post follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-includes\functions.php on line 840
+[17-Sep-2021 14:23:48 UTC] PHP Warning:  Private methods cannot be final as they are never overridden by other classes in C:\xampp\htdocs\grundsolo\wp-includes\class-wp-session-tokens.php on line 69
+[17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $tt_id follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $taxonomy follows optional parameter $object_id in C:\xampp\htdocs\grundsolo\wp-includes\nav-menu.php on line 1060
+[17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $block_attributes follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $block_content follows optional parameter $block_name in C:\xampp\htdocs\grundsolo\wp-includes\blocks.php on line 405
+[17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 151
+[17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $args follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $output follows optional parameter $depth in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\structure\structure-header.php on line 431
+[17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\tabs.php on line 3
+[17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\blog_posts.php on line 3
+[17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $code follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\google_maps.php on line 3
+[17-Sep-2021 14:23:48 UTC] PHP Deprecated:  Required parameter $tag follows optional parameter $content in C:\xampp\htdocs\grundsolo\wp-content\themes\flatsome\inc\shortcodes\portfolio.php on line 4
