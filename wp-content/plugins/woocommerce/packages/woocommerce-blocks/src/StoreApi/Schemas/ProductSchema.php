@@ -1,17 +1,13 @@
 <?php
-/**
- * Product Schema.
- *
- * @package WooCommerce/Blocks
- */
-
 namespace Automattic\WooCommerce\Blocks\StoreApi\Schemas;
 
-defined( 'ABSPATH' ) || exit;
+use Automattic\WooCommerce\Blocks\Domain\Services\ExtendRestApi;
+
 
 /**
  * ProductSchema class.
  *
+ * @internal This API is used internally by Blocks--it is still in flux and may be subject to revisions.
  * @since 2.5.0
  */
 class ProductSchema extends AbstractSchema {
@@ -23,6 +19,13 @@ class ProductSchema extends AbstractSchema {
 	protected $title = 'product';
 
 	/**
+	 * The schema item identifier.
+	 *
+	 * @var string
+	 */
+	const IDENTIFIER = 'product';
+
+	/**
 	 * Image attachment schema instance.
 	 *
 	 * @var ImageAttachmentSchema
@@ -32,10 +35,12 @@ class ProductSchema extends AbstractSchema {
 	/**
 	 * Constructor.
 	 *
+	 * @param ExtendRestApi         $extend Rest Extending instance.
 	 * @param ImageAttachmentSchema $image_attachment_schema Image attachment schema instance.
 	 */
-	public function __construct( ImageAttachmentSchema $image_attachment_schema ) {
+	public function __construct( ExtendRestApi $extend, ImageAttachmentSchema $image_attachment_schema ) {
 		$this->image_attachment_schema = $image_attachment_schema;
+		parent::__construct( $extend );
 	}
 
 	/**
@@ -431,11 +436,11 @@ class ProductSchema extends AbstractSchema {
 			'variation'           => $this->prepare_html_response( $product->is_type( 'variation' ) ? wc_get_formatted_variation( $product, true, true, false ) : '' ),
 			'permalink'           => $product->get_permalink(),
 			'sku'                 => $this->prepare_html_response( $product->get_sku() ),
-			'short_description'   => $this->prepare_html_response( wc_format_content( $product->get_short_description() ) ),
-			'description'         => $this->prepare_html_response( wc_format_content( $product->get_description() ) ),
+			'short_description'   => $this->prepare_html_response( wc_format_content( wp_kses_post( $product->get_short_description() ) ) ),
+			'description'         => $this->prepare_html_response( wc_format_content( wp_kses_post( $product->get_description() ) ) ),
 			'on_sale'             => $product->is_on_sale(),
 			'prices'              => (object) $this->prepare_product_price_response( $product ),
-			'price_html'          => $product->get_price_html(),
+			'price_html'          => $this->prepare_html_response( $product->get_price_html() ),
 			'average_rating'      => $product->get_average_rating(),
 			'review_count'        => $product->get_review_count(),
 			'images'              => $this->get_images( $product ),
@@ -551,11 +556,16 @@ class ProductSchema extends AbstractSchema {
 		}
 		global $wpdb;
 
-		$variation_ids               = $product->get_visible_children();
+		$variation_ids = $product->get_visible_children();
+
+		if ( ! count( $variation_ids ) ) {
+			return [];
+		}
+
 		$attributes                  = array_filter( $product->get_attributes(), [ $this, 'filter_variation_attribute' ] );
 		$default_variation_meta_data = array_reduce(
 			$attributes,
-			function( $defaults, $attribute ) {
+			function( $defaults, $attribute ) use ( $product ) {
 				$meta_key              = wc_variation_attribute_name( $attribute->get_name() );
 				$defaults[ $meta_key ] = [
 					'name'  => wc_attribute_label( $attribute->get_name(), $product ),
@@ -667,16 +677,25 @@ class ProductSchema extends AbstractSchema {
 	 * @return array
 	 */
 	protected function prepare_product_price_response( \WC_Product $product, $tax_display_mode = '' ) {
-		$prices           = $this->get_store_currency_response();
+		$prices           = [];
 		$tax_display_mode = $this->get_tax_display_mode( $tax_display_mode );
 		$price_function   = $this->get_price_function_from_tax_display_mode( $tax_display_mode );
 
+		// If we have a variable product, get the price from the variations (this will use the min value).
+		if ( $product->is_type( 'variable' ) ) {
+			$regular_price = $product->get_variation_regular_price();
+			$sale_price    = $product->get_variation_sale_price();
+		} else {
+			$regular_price = $product->get_regular_price();
+			$sale_price    = $product->get_sale_price();
+		}
+
 		$prices['price']         = $this->prepare_money_response( $price_function( $product ), wc_get_price_decimals() );
-		$prices['regular_price'] = $this->prepare_money_response( $price_function( $product, [ 'price' => $product->get_regular_price() ] ), wc_get_price_decimals() );
-		$prices['sale_price']    = $this->prepare_money_response( $price_function( $product, [ 'price' => $product->get_sale_price() ] ), wc_get_price_decimals() );
+		$prices['regular_price'] = $this->prepare_money_response( $price_function( $product, [ 'price' => $regular_price ] ), wc_get_price_decimals() );
+		$prices['sale_price']    = $this->prepare_money_response( $price_function( $product, [ 'price' => $sale_price ] ), wc_get_price_decimals() );
 		$prices['price_range']   = $this->get_price_range( $product, $tax_display_mode );
 
-		return $prices;
+		return $this->prepare_currency_response( $prices );
 	}
 
 	/**

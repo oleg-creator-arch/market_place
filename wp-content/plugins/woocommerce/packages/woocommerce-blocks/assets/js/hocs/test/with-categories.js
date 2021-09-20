@@ -2,15 +2,15 @@
  * External dependencies
  */
 import TestRenderer from 'react-test-renderer';
+import * as mockUtils from '@woocommerce/editor-components/utils';
 
 /**
  * Internal dependencies
  */
 import withCategories from '../with-categories';
-import * as mockUtils from '../../components/utils';
 import * as mockBaseUtils from '../../base/utils/errors';
 
-jest.mock( '../../components/utils', () => ( {
+jest.mock( '@woocommerce/editor-components/utils', () => ( {
 	getCategories: jest.fn(),
 } ) );
 
@@ -97,7 +97,7 @@ describe( 'withCategories Component', () => {
 			expect( formatError ).toHaveBeenCalledTimes( 1 );
 			expect( props.error ).toEqual( formattedError );
 			expect( props.isLoading ).toBe( false );
-			expect( props.categories ).toBeNull();
+			expect( props.categories ).toEqual( [] );
 		} );
 	} );
 } );

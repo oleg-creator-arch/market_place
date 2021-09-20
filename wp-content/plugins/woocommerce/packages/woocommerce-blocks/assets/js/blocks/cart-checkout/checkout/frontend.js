@@ -3,21 +3,21 @@
  */
 import { __ } from '@wordpress/i18n';
 import {
-	withRestApiHydration,
 	withStoreCartApiHydration,
+	withRestApiHydration,
 } from '@woocommerce/block-hocs';
-import { useStoreCart } from '@woocommerce/base-hooks';
+import { useStoreCart } from '@woocommerce/base-context/hooks';
 import {
 	StoreNoticesProvider,
 	ValidationContextProvider,
 } from '@woocommerce/base-context';
 import BlockErrorBoundary from '@woocommerce/base-components/block-error-boundary';
-import { CURRENT_USER_IS_ADMIN } from '@woocommerce/block-settings';
-import { __experimentalCreateInterpolateElement } from 'wordpress-element';
+import { CURRENT_USER_IS_ADMIN } from '@woocommerce/settings';
 import {
 	renderFrontend,
 	getValidBlockAttributes,
 } from '@woocommerce/base-utils';
+import { StoreSnackbarNoticesProvider } from '@woocommerce/base-context/providers';
 
 /**
  * Internal dependencies
@@ -27,6 +27,20 @@ import blockAttributes from './attributes';
 import EmptyCart from './empty-cart/index.js';
 
 const reloadPage = () => void window.location.reload( true );
+
+const errorBoundaryProps = {
+	header: __( 'Something went wrong…', 'woocommerce' ),
+	text: __(
+		'The checkout has encountered an unexpected error. If the error persists, please get in touch with us for help.',
+		'woocommerce'
+	),
+	showErrorMessage: CURRENT_USER_IS_ADMIN,
+	button: (
+		<button className="wc-block-button" onClick={ reloadPage }>
+			{ __( 'Reload the page', 'woocommerce' ) }
+		</button>
+	),
+};
 
 /**
  * Wrapper component for the checkout block.
@@ -41,32 +55,14 @@ const CheckoutFrontend = ( props ) => {
 			{ ! cartIsLoading && cartItems.length === 0 ? (
 				<EmptyCart />
 			) : (
-				<BlockErrorBoundary
-					header={ __(
-						'Something went wrong…',
-						'woocommerce'
-					) }
-					text={ __experimentalCreateInterpolateElement(
-						__(
-							'The checkout has encountered an unexpected error. <button>Try reloading the page</button>. If the error persists, please get in touch with us so we can assist.',
-							'woocommerce'
-						),
-						{
-							button: (
-								<button
-									className="wc-block-link-button"
-									onClick={ reloadPage }
-								/>
-							),
-						}
-					) }
-					showErrorMessage={ CURRENT_USER_IS_ADMIN }
-				>
-					<StoreNoticesProvider context="wc/checkout">
-						<ValidationContextProvider>
-							<Block { ...props } />
-						</ValidationContextProvider>
-					</StoreNoticesProvider>
+				<BlockErrorBoundary { ...errorBoundaryProps }>
+					<StoreSnackbarNoticesProvider context="wc/checkout">
+						<StoreNoticesProvider context="wc/checkout">
+							<ValidationContextProvider>
+								<Block { ...props } />
+							</ValidationContextProvider>
+						</StoreNoticesProvider>
+					</StoreSnackbarNoticesProvider>
 				</BlockErrorBoundary>
 			) }
 		</>
@@ -80,24 +76,7 @@ const getProps = ( el ) => {
 };
 
 const getErrorBoundaryProps = () => {
-	return {
-		header: __( 'Something went wrong…', 'woocommerce' ),
-		text: __experimentalCreateInterpolateElement(
-			__(
-				'The checkout has encountered an unexpected error. <button>Try reloading the page</button>. If the error persists, please get in touch with us so we can assist.',
-				'woocommerce'
-			),
-			{
-				button: (
-					<button
-						className="wc-block-link-button"
-						onClick={ reloadPage }
-					/>
-				),
-			}
-		),
-		showErrorMessage: CURRENT_USER_IS_ADMIN,
-	};
+	return errorBoundaryProps;
 };
 
 renderFrontend( {

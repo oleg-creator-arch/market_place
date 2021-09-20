@@ -155,6 +155,10 @@ define('WP_DEBUG_DISPLAY', false);
 
 define( 'SCRIPT_DEBUG', true );
 
+//fix woocomerce
+define('FORCE_SSL_ADMIN', true);
+
+define('FORCE_SSL_LOGIN', true);
 
 /* That's all, stop editing! Happy publishing. */
 

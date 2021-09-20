@@ -7,8 +7,7 @@ import {
 	BlockControls,
 	InnerBlocks,
 	InspectorControls,
-	MediaUpload,
-	MediaUploadCheck,
+	MediaReplaceFlow,
 	PanelColorSettings,
 	withColors,
 	RichText,
@@ -16,24 +15,21 @@ import {
 import {
 	Button,
 	FocalPointPicker,
-	IconButton,
 	PanelBody,
 	Placeholder,
 	RangeControl,
 	ResizableBox,
 	Spinner,
 	ToggleControl,
-	Toolbar,
 	withSpokenMessages,
 } from '@wordpress/components';
 import classnames from 'classnames';
-import { Fragment } from '@wordpress/element';
 import { compose } from '@wordpress/compose';
 import PropTypes from 'prop-types';
-import { MIN_HEIGHT } from '@woocommerce/block-settings';
+import { getSetting } from '@woocommerce/settings';
 import { Icon, folderStarred } from '@woocommerce/icons';
-import ProductCategoryControl from '@woocommerce/block-components/product-category-control';
-import ErrorPlaceholder from '@woocommerce/block-components/error-placeholder';
+import ProductCategoryControl from '@woocommerce/editor-components/product-category-control';
+import ErrorPlaceholder from '@woocommerce/editor-components/error-placeholder';
 
 /**
  * Internal dependencies
@@ -48,6 +44,18 @@ import { withCategory } from '../../hocs';
 
 /**
  * Component to handle edit mode of "Featured Category".
+ *
+ * @param {Object} props Incoming props for the component.
+ * @param {Object} props.attributes Incoming block attributes.
+ * @param {boolean} props.isSelected Whether block is selected or not.
+ * @param {function(any):any} props.setAttributes Function for setting new attributes.
+ * @param {string} props.error Error message
+ * @param {function(any):any} props.getCategory Function for getting category details.
+ * @param {boolean} props.isLoading Whether loading or not.
+ * @param {Object} props.category The product category object.
+ * @param {Object} props.overlayColor Overlay color object for content.
+ * @param {function(any):any} props.setOverlayColor Setter for overlay color.
+ * @param {function(any):any} props.debouncedSpeak Function for delayed speak.
  */
 const FeaturedCategory = ( {
 	attributes,
@@ -71,7 +79,7 @@ const FeaturedCategory = ( {
 	);
 
 	const getBlockControls = () => {
-		const { contentAlign } = attributes;
+		const { contentAlign, mediaSrc } = attributes;
 		const mediaId = attributes.mediaId || getCategoryImageId( category );
 
 		return (
@@ -82,29 +90,18 @@ const FeaturedCategory = ( {
 						setAttributes( { contentAlign: nextAlign } );
 					} }
 				/>
-				<MediaUploadCheck>
-					<Toolbar>
-						<MediaUpload
-							onSelect={ ( media ) => {
-								setAttributes( {
-									mediaId: media.id,
-									mediaSrc: media.url,
-								} );
-							} }
-							allowedTypes={ [ 'image' ] }
-							value={ mediaId }
-							render={ ( { open } ) => (
-								<IconButton
-									className="components-toolbar__control"
-									label={ __( 'Edit media' ) }
-									icon="format-image"
-									onClick={ open }
-									disabled={ ! category }
-								/>
-							) }
-						/>
-					</Toolbar>
-				</MediaUploadCheck>
+				<MediaReplaceFlow
+					mediaId={ mediaId }
+					mediaURL={ mediaSrc }
+					accept="image/*"
+					onSelect={ ( media ) => {
+						setAttributes( {
+							mediaId: media.id,
+							mediaSrc: media.url,
+						} );
+					} }
+					allowedTypes={ [ 'image' ] }
+				/>
 			</BlockControls>
 		);
 	};
@@ -146,7 +143,7 @@ const FeaturedCategory = ( {
 					] }
 				>
 					{ !! url && (
-						<Fragment>
+						<>
 							<RangeControl
 								label={ __(
 									'Background Opacity',
@@ -170,7 +167,7 @@ const FeaturedCategory = ( {
 									}
 								/>
 							) }
-						</Fragment>
+						</>
 					) }
 				</PanelColorSettings>
 			</InspectorControls>
@@ -306,7 +303,7 @@ const FeaturedCategory = ( {
 			<ResizableBox
 				className={ classes }
 				size={ { height } }
-				minHeight={ MIN_HEIGHT }
+				minHeight={ getSetting( 'min_height', 500 ) }
 				enable={ { bottom: true } }
 				onResizeStop={ onResizeStop }
 				style={ style }
@@ -362,11 +359,11 @@ const FeaturedCategory = ( {
 	}
 
 	return (
-		<Fragment>
+		<>
 			{ getBlockControls() }
 			{ getInspectorControls() }
 			{ category ? renderCategory() : renderNoCategory() }
-		</Fragment>
+		</>
 	);
 };
 

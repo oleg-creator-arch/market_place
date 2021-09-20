@@ -113,7 +113,7 @@ class WC_Tracker {
 	 *
 	 * @return array
 	 */
-	private static function get_tracking_data() {
+	public static function get_tracking_data() {
 		$data = array();
 
 		// General site info.
@@ -166,6 +166,9 @@ class WC_Tracker {
 		// Cart & checkout tech (blocks or shortcodes).
 		$data['cart_checkout'] = self::get_cart_checkout_info();
 
+		// WooCommerce Admin info.
+		$data['wc_admin_disabled'] = apply_filters( 'woocommerce_admin_disabled', false ) ? 'yes' : 'no';
+
 		return apply_filters( 'woocommerce_tracker_data', $data );
 	}
 
@@ -202,11 +205,19 @@ class WC_Tracker {
 			$memory        = max( $memory, $system_memory );
 		}
 
+		// WordPress 5.5+ environment type specification.
+		// 'production' is the default in WP, thus using it as a default here, too.
+		$environment_type = 'production';
+		if ( function_exists( 'wp_get_environment_type' ) ) {
+			$environment_type = wp_get_environment_type();
+		}
+
 		$wp_data['memory_limit'] = size_format( $memory );
 		$wp_data['debug_mode']   = ( defined( 'WP_DEBUG' ) && WP_DEBUG ) ? 'Yes' : 'No';
 		$wp_data['locale']       = get_locale();
 		$wp_data['version']      = get_bloginfo( 'version' );
 		$wp_data['multisite']    = is_multisite() ? 'Yes' : 'No';
+		$wp_data['env_type']     = $environment_type;
 
 		return $wp_data;
 	}
@@ -344,7 +355,7 @@ class WC_Tracker {
 	}
 
 	/**
-	 * Get order counts
+	 * Get order counts.
 	 *
 	 * @return array
 	 */
@@ -363,11 +374,151 @@ class WC_Tracker {
 	 * @return array
 	 */
 	private static function get_orders() {
-		$order_dates  = self::get_order_dates();
-		$order_counts = self::get_order_counts();
-		$order_totals = self::get_order_totals();
+		$order_dates    = self::get_order_dates();
+		$order_counts   = self::get_order_counts();
+		$order_totals   = self::get_order_totals();
+		$order_gateways = self::get_orders_by_gateway();
 
-		return array_merge( $order_dates, $order_counts, $order_totals );
+		return array_merge( $order_dates, $order_counts, $order_totals, $order_gateways );
+	}
+
+	/**
+	 * Get order totals.
+	 *
+	 * @since 5.4.0
+	 * @return array
+	 */
+	private static function get_order_totals() {
+		global $wpdb;
+
+		$gross_total = $wpdb->get_var(
+			"
+			SELECT
+				SUM( order_meta.meta_value ) AS 'gross_total'
+			FROM {$wpdb->prefix}posts AS orders
+			LEFT JOIN {$wpdb->prefix}postmeta AS order_meta ON order_meta.post_id = orders.ID
+			WHERE order_meta.meta_key =  '_order_total'
+				AND orders.post_status in ( 'wc-completed', 'wc-refunded' )
+			GROUP BY order_meta.meta_key
+		"
+		);
+
+		if ( is_null( $gross_total ) ) {
+			$gross_total = 0;
+		}
+
+		$processing_gross_total = $wpdb->get_var(
+			"
+			SELECT
+				SUM( order_meta.meta_value ) AS 'gross_total'
+			FROM {$wpdb->prefix}posts AS orders
+			LEFT JOIN {$wpdb->prefix}postmeta AS order_meta ON order_meta.post_id = orders.ID
+			WHERE order_meta.meta_key =  '_order_total'
+				AND orders.post_status = 'wc-processing'
+			GROUP BY order_meta.meta_key
+		"
+		);
+
+		if ( is_null( $processing_gross_total ) ) {
+			$processing_gross_total = 0;
+		}
+
+		return array(
+			'gross'            => $gross_total,
+			'processing_gross' => $processing_gross_total,
+		);
+	}
+
+	/**
+	 * Get last order date.
+	 *
+	 * @return string
+	 */
+	private static function get_order_dates() {
+		global $wpdb;
+
+		$min_max = $wpdb->get_row(
+			"
+			SELECT
+				MIN( post_date_gmt ) as 'first', MAX( post_date_gmt ) as 'last'
+			FROM {$wpdb->prefix}posts
+			WHERE post_type = 'shop_order'
+			AND post_status = 'wc-completed'
+		",
+			ARRAY_A
+		);
+
+		if ( is_null( $min_max ) ) {
+			$min_max = array(
+				'first' => '-',
+				'last'  => '-',
+			);
+		}
+
+		$processing_min_max = $wpdb->get_row(
+			"
+			SELECT
+				MIN( post_date_gmt ) as 'processing_first', MAX( post_date_gmt ) as 'processing_last'
+			FROM {$wpdb->prefix}posts
+			WHERE post_type = 'shop_order'
+			AND post_status = 'wc-processing'
+		",
+			ARRAY_A
+		);
+
+		if ( is_null( $processing_min_max ) ) {
+			$processing_min_max = array(
+				'processing_first' => '-',
+				'processing_last'  => '-',
+			);
+		}
+
+		return array_merge( $min_max, $processing_min_max );
+	}
+
+	/**
+	 * Get order details by gateway.
+	 *
+	 * @return array
+	 */
+	private static function get_orders_by_gateway() {
+		global $wpdb;
+
+		$orders_by_gateway = $wpdb->get_results(
+			"
+			SELECT
+				gateway, currency, SUM(total) AS totals, COUNT(order_id) AS counts
+			FROM (
+				SELECT
+					orders.id AS order_id,
+					MAX(CASE WHEN meta_key = '_payment_method' THEN meta_value END) gateway,
+					MAX(CASE WHEN meta_key = '_order_total' THEN meta_value END) total,
+					MAX(CASE WHEN meta_key = '_order_currency' THEN meta_value END) currency
+				FROM
+					{$wpdb->prefix}posts orders
+				LEFT JOIN
+					{$wpdb->prefix}postmeta order_meta ON order_meta.post_id = orders.id
+				WHERE orders.post_type = 'shop_order'
+					AND orders.post_status in ( 'wc-completed', 'wc-processing', 'wc-refunded' )
+					AND meta_key in( '_payment_method','_order_total','_order_currency')
+				GROUP BY orders.id
+			) order_gateways
+			GROUP BY gateway, currency
+			"
+		);
+
+		$orders_by_gateway_currency = array();
+		foreach ( $orders_by_gateway as $orders_details ) {
+			$gateway  = 'gateway_' . $orders_details->gateway;
+			$currency = $orders_details->currency;
+			$count    = $gateway . '_' . $currency . '_count';
+			$total    = $gateway . '_' . $currency . '_total';
+
+			$orders_by_gateway_currency[ $count ] = $orders_details->counts;
+			$orders_by_gateway_currency[ $total ] = $orders_details->totals;
+		}
+
+		return $orders_by_gateway_currency;
 	}
 
 	/**
@@ -477,6 +628,7 @@ class WC_Tracker {
 			'calc_taxes'                            => get_option( 'woocommerce_calc_taxes' ),
 			'coupons_enabled'                       => get_option( 'woocommerce_enable_coupons' ),
 			'guest_checkout'                        => get_option( 'woocommerce_enable_guest_checkout' ),
+			'checkout_login_reminder'               => get_option( 'woocommerce_enable_checkout_login_reminder' ),
 			'secure_checkout'                       => get_option( 'woocommerce_force_ssl_checkout' ),
 			'enable_signup_and_login_from_checkout' => get_option( 'woocommerce_enable_signup_and_login_from_checkout' ),
 			'enable_myaccount_registration'         => get_option( 'woocommerce_enable_myaccount_registration' ),
@@ -533,99 +685,6 @@ class WC_Tracker {
 	}
 
 	/**
-	 * Get order totals
-	 *
-	 * @return array
-	 */
-	public static function get_order_totals() {
-		global $wpdb;
-
-		$gross_total = $wpdb->get_var(
-			"
-			SELECT
-				SUM( order_meta.meta_value ) AS 'gross_total'
-			FROM {$wpdb->prefix}posts AS orders
-			LEFT JOIN {$wpdb->prefix}postmeta AS order_meta ON order_meta.post_id = orders.ID
-			WHERE order_meta.meta_key =  '_order_total'
-				AND orders.post_status in ( 'wc-completed', 'wc-refunded' )
-			GROUP BY order_meta.meta_key
-		"
-		);
-
-		if ( is_null( $gross_total ) ) {
-			$gross_total = 0;
-		}
-
-		$processing_gross_total = $wpdb->get_var(
-			"
-			SELECT
-				SUM( order_meta.meta_value ) AS 'gross_total'
-			FROM {$wpdb->prefix}posts AS orders
-			LEFT JOIN {$wpdb->prefix}postmeta AS order_meta ON order_meta.post_id = orders.ID
-			WHERE order_meta.meta_key =  '_order_total'
-				AND orders.post_status = 'wc-processing'
-			GROUP BY order_meta.meta_key
-		"
-		);
-
-		if ( is_null( $processing_gross_total ) ) {
-			$processing_gross_total = 0;
-		}
-
-		return array(
-			'gross'            => $gross_total,
-			'processing_gross' => $processing_gross_total,
-		);
-	}
-
-	/**
-	 * Get last order date
-	 *
-	 * @return string
-	 */
-	private static function get_order_dates() {
-		global $wpdb;
-
-		$min_max = $wpdb->get_row(
-			"
-			SELECT
-				MIN( post_date_gmt ) as 'first', MAX( post_date_gmt ) as 'last'
-			FROM {$wpdb->prefix}posts
-			WHERE post_type = 'shop_order'
-			AND post_status = 'wc-completed'
-		",
-			ARRAY_A
-		);
-
-		if ( is_null( $min_max ) ) {
-			$min_max = array(
-				'first' => '-',
-				'last'  => '-',
-			);
-		}
-
-		$processing_min_max = $wpdb->get_row(
-			"
-			SELECT
-				MIN( post_date_gmt ) as 'processing_first', MAX( post_date_gmt ) as 'processing_last'
-			FROM {$wpdb->prefix}posts
-			WHERE post_type = 'shop_order'
-			AND post_status = 'wc-processing'
-		",
-			ARRAY_A
-		);
-
-		if ( is_null( $processing_min_max ) ) {
-			$processing_min_max = array(
-				'processing_first' => '-',
-				'processing_last'  => '-',
-			);
-		}
-
-		return array_merge( $min_max, $processing_min_max );
-	}
-
-	/**
 	 * Search a specific post for text content.
 	 *
 	 * @param integer $post_id The id of the post to search.
@@ -652,49 +711,6 @@ class WC_Tracker {
 		return ( '0' !== $result ) ? 'Yes' : 'No';
 	}
 
-	/**
-	 * Get blocks from a woocommerce page.
-	 *
-	 * @param string $woo_page_name A woocommerce page e.g. `checkout` or `cart`.
-	 * @return array Array of blocks as returned by parse_blocks().
-	 */
-	private static function get_all_blocks_from_page( $woo_page_name ) {
-		$page_id = wc_get_page_id( $woo_page_name );
-
-		$page = get_post( $page_id );
-		if ( ! $page ) {
-			return array();
-		}
-
-		$blocks = parse_blocks( $page->post_content );
-		if ( ! $blocks ) {
-			return array();
-		}
-
-		return $blocks;
-	}
-
-	/**
-	 * Get all instances of the specified block on a specific woo page
-	 * (e.g. `cart` or `checkout` page).
-	 *
-	 * @param string $block_name The name (id) of a block, e.g. `woocommerce/cart`.
-	 * @param string $woo_page_name The woo page to search, e.g. `cart`.
-	 * @return array Array of blocks as returned by parse_blocks().
-	 */
-	private static function get_blocks_from_page( $block_name, $woo_page_name ) {
-		$page_blocks = self::get_all_blocks_from_page( $woo_page_name );
-
-		// Get any instances of the specified block.
-		return array_values(
-			array_filter(
-				$page_blocks,
-				function ( $block ) use ( $block_name ) {
-					return ( $block_name === $block['blockName'] );
-				}
-			)
-		);
-	}
 
 	/**
 	 * Get tracker data for a specific block type on a woocommerce page.
@@ -706,7 +722,7 @@ class WC_Tracker {
 	 * - block_attributes
 	 */
 	public static function get_block_tracker_data( $block_name, $woo_page_name ) {
-		$blocks = self::get_blocks_from_page( $block_name, $woo_page_name );
+		$blocks = WC_Blocks_Utils::get_blocks_from_page( $block_name, $woo_page_name );
 
 		$block_present = false;
 		$attributes    = array();

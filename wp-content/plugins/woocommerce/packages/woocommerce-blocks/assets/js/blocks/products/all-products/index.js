@@ -14,7 +14,7 @@ import Editor from './edit';
 import { attributes as sharedAttributes, defaults } from '../attributes';
 import { getBlockClassName } from '../utils.js';
 
-const blockSettings = {
+export const blockSettings = {
 	title: __( 'All Products', 'woocommerce' ),
 	icon: {
 		src: <Icon srcElement={ grid } />,
@@ -46,11 +46,7 @@ const blockSettings = {
 	edit( props ) {
 		return <Editor { ...props } />;
 	},
-	/**
-	 * Save the props to post content.
-	 *
-	 * @param {Object} attributes Attributes to save.
-	 */
+	// Save the props to post content.
 	save( { attributes } ) {
 		const dataAttributes = {};
 		Object.keys( attributes )

@@ -3,17 +3,19 @@
  */
 import { __ } from '@wordpress/i18n';
 import { useEffect } from 'react';
-import { useValidationContext } from '@woocommerce/base-context';
 import { useShallowEqual } from '@woocommerce/base-hooks';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { withInstanceId } from '@woocommerce/base-hocs/with-instance-id';
+import {
+	ValidationInputError,
+	useValidationContext,
+} from '@woocommerce/base-context';
 
 /**
  * Internal dependencies
  */
-import { ValidationInputError } from '../validation';
-import Select from './index';
+import Select from './select';
 import './style.scss';
 
 const ValidatedSelect = ( {
@@ -41,7 +43,7 @@ const ValidatedSelect = ( {
 		clearValidationError,
 	} = useValidationContext();
 
-	const validateSelect = () => {
+	useEffect( () => {
 		if ( ! required || currentValue ) {
 			clearValidationError( errorId );
 		} else {
@@ -52,18 +54,21 @@ const ValidatedSelect = ( {
 				},
 			} );
 		}
-	};
-
-	useEffect( () => {
-		validateSelect();
-	}, [ currentValue ] );
+	}, [
+		clearValidationError,
+		currentValue,
+		errorId,
+		errorMessage,
+		required,
+		setValidationErrors,
+	] );
 
 	// Remove validation errors when unmounted.
 	useEffect( () => {
 		return () => {
 			clearValidationError( errorId );
 		};
-	}, [ errorId ] );
+	}, [ clearValidationError, errorId ] );
 
 	const error = getValidationError( errorId ) || {};
 

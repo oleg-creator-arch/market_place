@@ -10,9 +10,8 @@ import {
 	withSpokenMessages,
 } from '@wordpress/components';
 import { SearchListItem } from '@woocommerce/components';
-import { Fragment } from '@wordpress/element';
 import PropTypes from 'prop-types';
-import ProductControl from '@woocommerce/block-components/product-control';
+import ProductControl from '@woocommerce/editor-components/product-control';
 import { Icon, comment } from '@woocommerce/icons';
 
 /**
@@ -28,6 +27,11 @@ import {
 
 /**
  * Component to handle edit mode of "Reviews by Product".
+ *
+ * @param {Object} props Incoming props for the component.
+ * @param {Object} props.attributes Incoming block attributes.
+ * @param {function(any):any} props.debouncedSpeak
+ * @param {function(any):any} props.setAttributes Setter for block attributes.
  */
 const ReviewsByProductEditor = ( {
 	attributes,
@@ -43,19 +47,20 @@ const ReviewsByProductEditor = ( {
 			<SearchListItem
 				{ ...args }
 				countLabel={ sprintf(
+					/* translators: %d is the review count. */
 					_n(
-						'%d Review',
-						'%d Reviews',
+						'%d review',
+						'%d reviews',
 						item.review_count,
 						'woocommerce'
 					),
 					item.review_count
 				) }
-				showCount
 				aria-label={ sprintf(
+					/* translators: %1$s is the item name, and %2$d is the number of reviews for the item. */
 					_n(
-						'%s, has %d review',
-						'%s, has %d reviews',
+						'%1$s, has %2$d review',
+						'%1$s, has %2$d reviews',
 						item.review_count,
 						'woocommerce'
 					),
@@ -80,6 +85,7 @@ const ReviewsByProductEditor = ( {
 							setAttributes( { productId: id } );
 						} }
 						renderItem={ renderProductControlItem }
+						isCompact={ true }
 					/>
 				</PanelBody>
 				<PanelBody
@@ -157,12 +163,11 @@ const ReviewsByProductEditor = ( {
 	}
 
 	return (
-		<Fragment>
+		<>
 			{ getBlockControls( editMode, setAttributes ) }
 			{ getInspectorControls() }
 			<EditorContainerBlock
 				attributes={ attributes }
-				className="wc-block-reviews-by-product"
 				icon={
 					<Icon
 						icon={ comment }
@@ -175,7 +180,7 @@ const ReviewsByProductEditor = ( {
 				) }
 				noReviewsPlaceholder={ NoReviewsPlaceholder }
 			/>
-		</Fragment>
+		</>
 	);
 };
 

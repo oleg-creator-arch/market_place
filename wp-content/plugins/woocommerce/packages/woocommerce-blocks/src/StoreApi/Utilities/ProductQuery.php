@@ -1,19 +1,13 @@
 <?php
-/**
- * Helper class to handle product queries for the API.
- *
- * @package WooCommerce/Blocks
- */
-
 namespace Automattic\WooCommerce\Blocks\StoreApi\Utilities;
-
-defined( 'ABSPATH' ) || exit;
 
 use WC_Tax;
 
 /**
  * Product Query class.
+ * Helper class to handle product queries for the API.
  *
+ * @internal This API is used internally by Blocks--it is still in flux and may be subject to revisions.
  * @since 2.5.0
  */
 class ProductQuery {
@@ -46,6 +40,9 @@ class ProductQuery {
 		if ( ! empty( $request['sku'] ) ) {
 			$args['post_type'] = [ 'product', 'product_variation' ];
 		}
+
+		// Taxonomy query to filter products by type, category, tag, shipping class, and attribute.
+		$tax_query = [];
 
 		// Filter product type by slug.
 		if ( ! empty( $request['type'] ) ) {
@@ -93,9 +90,6 @@ class ProductQuery {
 				$args[ $key ] = $request[ $key ];
 			}
 		}
-
-		// Taxonomy query to filter products by type, category, tag, shipping class, and attribute.
-		$tax_query = [];
 
 		$operator_mapping = [
 			'in'     => 'IN',
@@ -322,7 +316,7 @@ class ProductQuery {
 
 		if ( $wp_query->get( 'stock_status' ) ) {
 			$args['join']   = $this->append_product_sorting_table_join( $args['join'] );
-			$args['where'] .= $wpdb->prepare( ' AND wc_product_meta_lookup.stock_status = %s ', $wp_query->get( 'stock_status' ) );
+			$args['where'] .= ' AND wc_product_meta_lookup.stock_status IN ("' . implode( '","', array_map( 'esc_sql', $wp_query->get( 'stock_status' ) ) ) . '")';
 		}
 
 		if ( $wp_query->get( 'min_price' ) || $wp_query->get( 'max_price' ) ) {

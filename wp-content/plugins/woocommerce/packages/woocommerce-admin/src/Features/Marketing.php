@@ -6,6 +6,7 @@
 
 namespace Automattic\WooCommerce\Admin\Features;
 
+use Automattic\WooCommerce\Admin\Features\Features;
 use Automattic\WooCommerce\Admin\Marketing\InstalledExtensions;
 use Automattic\WooCommerce\Admin\Loader;
 use Automattic\WooCommerce\Admin\PageController;
@@ -69,15 +70,17 @@ class Marketing {
 	 * Uses priority of 9 so other items can easily be added at the default priority (10).
 	 */
 	public function add_parent_menu_item() {
-		add_menu_page(
-			__( 'Marketing', 'woocommerce' ),
-			__( 'Marketing', 'woocommerce' ),
-			'manage_woocommerce',
-			'woocommerce-marketing',
-			null,
-			'dashicons-megaphone',
-			58
-		);
+		if ( ! Features::is_enabled( 'navigation' ) ) {
+			add_menu_page(
+				__( 'Marketing', 'woocommerce' ),
+				__( 'Marketing', 'woocommerce' ),
+				'manage_woocommerce',
+				'woocommerce-marketing',
+				null,
+				'dashicons-megaphone',
+				58
+			);
+		}
 
 		PageController::get_instance()->connect_page(
 			[
@@ -130,10 +133,14 @@ class Marketing {
 		// First register the page.
 		PageController::get_instance()->register_page(
 			[
-				'id'     => 'woocommerce-marketing-overview',
-				'title'  => __( 'Overview', 'woocommerce' ),
-				'path'   => 'wc-admin&path=/marketing',
-				'parent' => 'woocommerce-marketing',
+				'id'       => 'woocommerce-marketing-overview',
+				'title'    => __( 'Overview', 'woocommerce' ),
+				'path'     => 'wc-admin&path=/marketing',
+				'parent'   => 'woocommerce-marketing',
+				'nav_args' => array(
+					'parent' => 'woocommerce-marketing',
+					'order'  => 10,
+				),
 			]
 		);
 

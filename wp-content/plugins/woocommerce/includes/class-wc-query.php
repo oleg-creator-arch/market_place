@@ -6,6 +6,8 @@
  * @package WooCommerce\Classes
  */
 
+use Automattic\WooCommerce\Internal\ProductAttributesLookup\Filterer;
+
 defined( 'ABSPATH' ) || exit;
 
 /**
@@ -23,7 +25,7 @@ class WC_Query {
 	/**
 	 * Reference to the main product query on the page.
 	 *
-	 * @var array
+	 * @var WP_Query
 	 */
 	private static $product_query;
 
@@ -35,9 +37,18 @@ class WC_Query {
 	private static $chosen_attributes;
 
 	/**
+	 * The instance of the class that helps filtering with the product attributes lookup table.
+	 *
+	 * @var Filterer
+	 */
+	private $filterer;
+
+	/**
 	 * Constructor for the query class. Hooks in methods.
 	 */
 	public function __construct() {
+		$this->filterer = wc_get_container()->get( Filterer::class );
+
 		add_action( 'init', array( $this, 'add_endpoints' ) );
 		if ( ! is_admin() ) {
 			add_action( 'wp_loaded', array( $this, 'get_errors' ), 20 );
@@ -47,6 +58,13 @@ class WC_Query {
 			add_filter( 'get_pagenum_link', array( $this, 'remove_add_to_cart_pagination' ), 10, 1 );
 		}
 		$this->init_query_vars();
+	}
+
+	/**
+	 * Reset the chosen attributes so that get_layered_nav_chosen_attributes will get them from the query again.
+	 */
+	public static function reset_chosen_attributes() {
+		self::$chosen_attributes = null;
 	}
 
 	/**
@@ -88,10 +106,14 @@ class WC_Query {
 	/**
 	 * Get page title for an endpoint.
 	 *
-	 * @param  string $endpoint Endpoint key.
-	 * @return string
+	 * @param string $endpoint Endpoint key.
+	 * @param string $action Optional action or variation within the endpoint.
+	 *
+	 * @since 2.3.0
+	 * @since 4.6.0 Added $action parameter.
+	 * @return string The page title.
 	 */
-	public function get_endpoint_title( $endpoint ) {
+	public function get_endpoint_title( $endpoint, $action = '' ) {
 		global $wp;
 
 		switch ( $endpoint ) {
@@ -130,14 +152,30 @@ class WC_Query {
 				$title = __( 'Add payment method', 'woocommerce' );
 				break;
 			case 'lost-password':
-				$title = __( 'Lost password', 'woocommerce' );
+				if ( in_array( $action, array( 'rp', 'resetpass', 'newaccount' ), true ) ) {
+					$title = __( 'Set password', 'woocommerce' );
+				} else {
+					$title = __( 'Lost password', 'woocommerce' );
+				}
 				break;
 			default:
 				$title = '';
 				break;
 		}
 
-		return apply_filters( 'woocommerce_endpoint_' . $endpoint . '_title', $title, $endpoint );
+		/**
+		 * Filters the page title used for my-account endpoints.
+		 *
+		 * @since 2.6.0
+		 * @since 4.6.0 Added $action parameter.
+		 *
+		 * @see get_endpoint_title()
+		 *
+		 * @param string $title Default title.
+		 * @param string $endpoint Endpoint key.
+		 * @param string $action Optional action or variation within the endpoint.
+		 */
+		return apply_filters( 'woocommerce_endpoint_' . $endpoint . '_title', $title, $endpoint, $action );
 	}
 
 	/**
@@ -467,10 +505,31 @@ class WC_Query {
 		self::$product_query = $q;
 
 		// Additonal hooks to change WP Query.
-		add_filter( 'posts_clauses', array( $this, 'price_filter_post_clauses' ), 10, 2 );
+		add_filter(
+			'posts_clauses',
+			function( $args, $wp_query ) {
+				return $this->product_query_post_clauses( $args, $wp_query );
+			},
+			10,
+			2
+		);
 		add_filter( 'the_posts', array( $this, 'handle_get_posts' ), 10, 2 );
 
 		do_action( 'woocommerce_product_query', $q, $this );
+	}
+
+	/**
+	 * Add extra clauses to the product query.
+	 *
+	 * @param array    $args Product query clauses.
+	 * @param WP_Query $wp_query The current product query.
+	 * @return array The updated product query clauses array.
+	 */
+	private function product_query_post_clauses( $args, $wp_query ) {
+		$args = $this->price_filter_post_clauses( $args, $wp_query );
+		$args = $this->filterer->filter_by_attribute_post_clauses( $args, $wp_query, $this->get_layered_nav_chosen_attributes() );
+
+		return $args;
 	}
 
 	/**
@@ -569,7 +628,7 @@ class WC_Query {
 	 * @since 3.6.0
 	 *
 	 * @param array    $args Query args.
-	 * @param WC_Query $wp_query WC_Query object.
+	 * @param WP_Query $wp_query WP_Query object.
 	 *
 	 * @return array
 	 */
@@ -602,9 +661,9 @@ class WC_Query {
 
 		$args['join']   = $this->append_product_sorting_table_join( $args['join'] );
 		$args['where'] .= $wpdb->prepare(
-			' AND wc_product_meta_lookup.min_price >= %f AND wc_product_meta_lookup.max_price <= %f ',
-			$current_min_price,
-			$current_max_price
+			' AND NOT (%f<wc_product_meta_lookup.min_price OR %f>wc_product_meta_lookup.max_price ) ',
+			$current_max_price,
+			$current_min_price
 		);
 		return $args;
 	}
@@ -702,8 +761,8 @@ class WC_Query {
 			);
 		}
 
-		// Layered nav filters on terms.
-		if ( $main_query ) {
+		if ( $main_query && ! $this->filterer->filtering_via_lookup_table_is_active() ) {
+			// Layered nav filters on terms.
 			foreach ( $this->get_layered_nav_chosen_attributes() as $taxonomy => $data ) {
 				$tax_query[] = array(
 					'taxonomy'         => $taxonomy,
@@ -761,7 +820,7 @@ class WC_Query {
 	/**
 	 * Get the main query which product queries ran against.
 	 *
-	 * @return array
+	 * @return WP_Query
 	 */
 	public static function get_main_query() {
 		return self::$product_query;

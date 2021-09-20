@@ -99,10 +99,10 @@ class OnboardingProfile extends \WC_REST_Data_Controller {
 	public function get_items( $request ) {
 		include_once WC_ABSPATH . 'includes/admin/helper/class-wc-helper-options.php';
 
-		$onboarding_data = get_option( Onboarding::PROFILE_DATA_OPTION, array() );
-		$item_schema     = $this->get_item_schema();
-
-		$items = array();
+		$onboarding_data             = get_option( Onboarding::PROFILE_DATA_OPTION, array() );
+		$onboarding_data['industry'] = isset( $onboarding_data['industry'] ) ? $this->filter_industries( $onboarding_data['industry'] ) : null;
+		$item_schema                 = $this->get_item_schema();
+		$items                       = array();
 		foreach ( $item_schema['properties'] as $key => $property_schema ) {
 			$items[ $key ] = isset( $onboarding_data[ $key ] ) ? $onboarding_data[ $key ] : null;
 		}
@@ -117,6 +117,19 @@ class OnboardingProfile extends \WC_REST_Data_Controller {
 	}
 
 	/**
+	 * Filter the industries.
+	 *
+	 * @param  array $industries list of industries.
+	 * @return array
+	 */
+	public function filter_industries( $industries ) {
+		return apply_filters(
+			'woocommerce_admin_onboarding_industries',
+			$industries
+		);
+	}
+
+	/**
 	 * Update onboarding profile data.
 	 *
 	 * @param  WP_REST_Request $request Request data.
@@ -125,7 +138,7 @@ class OnboardingProfile extends \WC_REST_Data_Controller {
 	public function update_items( $request ) {
 		$params          = $request->get_json_params();
 		$query_args      = $this->prepare_objects_query( $params );
-		$onboarding_data = get_option( Onboarding::PROFILE_DATA_OPTION, array() );
+		$onboarding_data = (array) get_option( Onboarding::PROFILE_DATA_OPTION, array() );
 		update_option( Onboarding::PROFILE_DATA_OPTION, array_merge( $onboarding_data, $query_args ) );
 
 		$result = array(
@@ -213,32 +226,6 @@ class OnboardingProfile extends \WC_REST_Data_Controller {
 				'readonly'          => true,
 				'validate_callback' => 'rest_validate_request_arg',
 			),
-			'plugins'             => array(
-				'type'              => 'string',
-				'description'       => __( 'How the Jetpack/WooCommerce Services step was handled.', 'woocommerce' ),
-				'context'           => array( 'view' ),
-				'readonly'          => true,
-				'validate_callback' => 'rest_validate_request_arg',
-				'enum'              => array(
-					'skipped',
-					'skipped-wcs',
-					'already-installed',
-					'installed-wcs',
-					'installed',
-				),
-			),
-			'account_type'        => array(
-				'type'              => 'string',
-				'description'       => __( 'Account type used for Jetpack.', 'woocommerce' ),
-				'context'           => array( 'view' ),
-				'readonly'          => true,
-				'validate_callback' => 'rest_validate_request_arg',
-				'enum'              => array(
-					'new',
-					'existing',
-					'google',
-				),
-			),
 			'industry'            => array(
 				'type'              => 'array',
 				'description'       => __( 'Industry.', 'woocommerce' ),
@@ -302,6 +289,7 @@ class OnboardingProfile extends \WC_REST_Data_Controller {
 					'10000-50000',
 					'50000-250000',
 					'more-than-250000',
+					'rather-not-say',
 				),
 			),
 			'other_platform'      => array(
@@ -342,8 +330,10 @@ class OnboardingProfile extends \WC_REST_Data_Controller {
 						'woocommerce-services',
 						'woocommerce-payments',
 						'mailchimp-for-woocommerce',
+						'creative-mail-by-constant-contact',
 						'facebook-for-woocommerce',
-						'kliken-marketing-for-google',
+						'google-listings-and-ads',
+						'mailpoet',
 					),
 					'type' => 'string',
 				),
@@ -354,13 +344,6 @@ class OnboardingProfile extends \WC_REST_Data_Controller {
 				'context'           => array( 'view' ),
 				'readonly'          => true,
 				'sanitize_callback' => 'sanitize_title_with_dashes',
-				'validate_callback' => 'rest_validate_request_arg',
-			),
-			'items_purchased'     => array(
-				'type'              => 'boolean',
-				'description'       => __( 'Whether or not the user opted to purchase items now or later.', 'woocommerce' ),
-				'context'           => array( 'view' ),
-				'readonly'          => true,
 				'validate_callback' => 'rest_validate_request_arg',
 			),
 			'setup_client'        => array(

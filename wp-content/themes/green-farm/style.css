@@ -1,0 +1,225 @@
+/*
+Theme Name: Green Farm
+Theme URI: https://www.ovationthemes.com/wordpress/free-green-farm-wordpress-theme/
+Author: pewilliams
+Author URI: https://www.ovationthemes.com/
+Description: Green Farm is a luxurious theme all ready to help you create a beautiful website with so many options for customization. The theme is suitable for websites of ecology, landscaping, environment, forest, farm produce, bio produce, animal husbandry, agriculture, Ayurveda, medicines, organic products and food, food packaging industry, nature conservation, eco social group websites. Also ideal for NGOs, wildlife, resorts, tours and travels, nature photographers etc. It is SEO-friendly theme that will help your website rank soon. It is translation-ready and supports RTL layout. The responsive layout makes it mobile-friendly therefore it looks stunning on any device. You can add shortcodes to it to improve the functionality. It is written with clean and secure codes. Also, it is optimized for speed therefore your website will load smoothly without any glitches. With the social media option you can link all your social media pages to give credibility to your work.
+Version: 0.1.2
+Requires PHP: 7.2
+Tested up to: 5.8
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: green-farm
+Template: organic-farm
+Tags: one-column, two-columns, right-sidebar, left-sidebar, grid-layout, full-width-template, sticky-post, block-styles, custom-colors, custom-background, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, threaded-comments, wide-blocks, food-and-drink, portfolio, e-commerce
+
+Green Farm WordPress Theme, Copyright 2021 pewilliams
+Green Farm is distributed under the terms of the GNU GPL
+
+Green Farm WordPress Theme is child theme of Organic Farm WordPress Theme, Copyright 2021 pewilliams
+Organic Farm WordPress Theme is distributed under the terms of the GNU GPL
+*/
+
+#Category-section h3 a, span.entry-author a,.comment-author a,.product_meta a,.content-area a,.gb_nav_menu li a {
+    text-decoration: underline;
+}
+
+button, input[type="button"], input[type="submit"],a.more-link,.prev.page-numbers, .next.page-numbers,.page-numbers.current,.gb_nav_menu ul ul,nav.woocommerce-MyAccount-navigation ul li,.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt,.home-btn a,#sidebar .tagcloud a:hover, .site-footer .tagcloud a:hover,.site-footer .search-form .search-submit,button.search-submit,.wp-block-button .wp-block-button__link,.toggle-menu button,#slider .carousel-control-next-icon:hover, #slider .carousel-control-prev-icon:hover,.ico-border::after, .ico-border::before{
+    background:#48d475;
+}
+
+a,#Category-section .postbox.smallpostimage:hover h3 a,#sidebar select,.ico-border i {
+    color: #48d475;
+}
+
+.sticky,.wp-block-quote:not(.is-large):not(.is-style-large), blockquote,.wp-block-quote:not(.is-large):not(.is-style-large) {
+    border-color: #48d475;
+}
+
+.gb_nav_menu ul ul a:hover,.header-top,.site-info {
+    background: #14361f;
+}
+
+.woocommerce ul.products li.product .price, .woocommerce div.product p.price, .woocommerce div.product span.price{
+    color: #48d475 !important;
+}
+
+.logo h1 a,h1, h2, h3, h4, h5, h6,#Category-section h3 a,#sidebar h3,.logo h1, .site-title, .site-title a,.comment-body {
+    color: #14361f;
+}
+
+/* --------- Header Top --------- */
+
+.header-top p,.links i {
+    color: #fff !important;
+}
+#header{
+    background: transparent;
+}
+.menu_header {
+    border-radius: 0;
+    position: static;
+    margin-top: 0;
+    box-shadow: none;
+    border-bottom: solid 1px #e5e5e5;
+    border-top: solid 1px #e5e5e5;
+}
+
+/* --------- Search --------- */
+
+.product-search button {
+    padding: 12px 20px;
+    background: url(assets/images/search.png) no-repeat scroll 10px;
+    text-indent: -9999px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+.product-search input[type="search"] {
+    padding: 15px;
+    margin: 0;
+    border-radius: 0;
+}
+.product-search {
+    position: relative;
+}
+a.header-cart {
+    color: #48d475;
+    font-size: 20px;
+}
+a.header-cart span {
+    background: #48d475;
+    padding: 0 5px;
+    border-radius: 50%;
+    color: #212121;
+    font-size: 12px;
+    font-weight: 900;
+    position: relative;
+    left: -6px;
+    top: -14px;
+}
+.menu_header select {
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    color: #a1a0a0;
+    text-align: center;
+}
+.menu_header button,.menu_header input[type="button"],.menu_header input[type="submit"]{
+    border-radius: 0;
+}
+.menu_header .wc-block-product-categories.is-dropdown {
+    border: solid 2px #e5e5e5;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+}
+.menu_header button.wc-block-product-categories__button {
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* --------- Slider --------- */
+
+#slider{
+    background: transparent;
+}
+#slider img {
+    opacity: unset;
+}
+#slider .carousel-caption {
+    right: 30%;
+    left: 30%;
+    bottom: auto;
+    background: rgb(13 33 45 / 52%);
+    padding: 15px;
+}
+#slider .carousel-caption h2{
+    color: #fff;
+    font-size: 45px;
+}
+.home-btn a:hover {
+    background: #fff;
+    color: #48d475;
+}
+
+.copyright {
+    background: #131313;
+}
+
+/* --------- loader --------- */
+
+.load :first-child{
+    background: #14361f;
+    animation-delay:-1.5s;
+}
+.load :nth-child(2){
+    background:#48d475;
+    animation-delay:-1s;
+}
+.load :nth-child(3){
+    background:#14361f;
+    animation-delay:-0.5s;
+}
+.load :last-child{
+    background:#48d475;
+}
+.bypostauthor > .comment-body > .comment-meta > .comment-author .avatar {
+    border: 1px solid #323232;
+    padding: 2px;
+}
+
+/* Accessibility */
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  clip-path: none;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+@media screen and (max-width: 800px){
+    .gb_nav_menu ul ul{
+        background: transparent;
+    }
+    #slider .carousel-caption {
+        right: 20%;
+        left: 20%;
+    }
+}

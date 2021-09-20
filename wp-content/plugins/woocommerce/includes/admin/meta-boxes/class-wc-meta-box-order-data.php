@@ -133,6 +133,9 @@ class WC_Meta_Box_Order_Data {
 					'class' => 'js_field-state select short',
 					'show'  => false,
 				),
+				'phone'      => array(
+					'label' => __( 'Phone', 'woocommerce' ),
+				),
 			)
 		);
 	}
@@ -344,6 +347,8 @@ class WC_Meta_Box_Order_Data {
 
 								if ( 'billing_phone' === $field_name ) {
 									$field_value = wc_make_phone_clickable( $field_value );
+								} elseif ( 'billing_email' === $field_name ) {
+									$field_value = '<a href="' . esc_url( 'mailto:' . $field_value ) . '">' . $field_value . '</a>';
 								} else {
 									$field_value = make_clickable( esc_html( $field_value ) );
 								}
@@ -456,6 +461,10 @@ class WC_Meta_Box_Order_Data {
 										$field_value = $order->{"get_$field_name"}( 'edit' );
 									} else {
 										$field_value = $order->get_meta( '_' . $field_name );
+									}
+
+									if ( 'shipping_phone' === $field_name ) {
+										$field_value = wc_make_phone_clickable( $field_value );
 									}
 
 									if ( $field_value ) {

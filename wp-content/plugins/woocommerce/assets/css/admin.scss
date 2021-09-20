@@ -154,10 +154,59 @@
 		border: 1px solid #e6e6e6;
 		margin-right: 2em;
 		padding: 4em;
+		max-width: 200px;
 
 		.addons-img {
 			max-height: 86px;
 			max-width: 97px;
+		}
+
+		&.is-full-image {
+			padding: 0;
+			background: none;
+			border: none;
+
+			.addons-img {
+				max-height: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+
+	.addons-promotion-block {
+		display: flex;
+		padding: 20px;
+
+		.addons-img {
+			height: auto;
+			width: 200px;
+		}
+	}
+
+	.addons-promotion-block-content {
+		display: flex;
+		flex-direction: column;
+		margin-left: 24px;
+	}
+
+	.addons-promotion-block-description {
+		margin-bottom: 20px;
+	}
+
+	.addons-promotion-block-title {
+		margin: 0 0 16px;
+		padding: 0;
+	}
+
+	.addons-promotion-block-buttons {
+		margin-top: auto;
+
+		.addons-button {
+			margin-right: 8px;
+
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 	}
 
@@ -182,8 +231,27 @@
 			margin-bottom: 0;
 		}
 
+		.wcs-logos-container {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			justify-content: center;
+
+			@media screen and (min-width: 500px) {
+				justify-content: left;
+			}
+
+			li {
+				margin-right: 8px;
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+
 		.wcs-service-logo {
-			max-width: 40px;
+			max-width: 45px;
 		}
 	}
 
@@ -360,8 +428,14 @@
 	}
 
 	.addons-button-solid {
-		background-color: #955a89;
+		background-color: #674399;
 		color: #fff;
+	}
+
+	.addons-button-expandable {
+		display: inline-block;
+		padding: 0 16px;
+		width: auto;
 	}
 
 	.addons-button-solid:hover {
@@ -376,6 +450,16 @@
 
 	.addons-button-outline-green:hover {
 		color: #73ae39;
+		opacity: 0.8;
+	}
+
+	.addons-button-outline-purple {
+		border: 1px solid #674399;
+		color: #674399;
+	}
+
+	.addons-button-outline-purple:hover {
+		color: #674399;
 		opacity: 0.8;
 	}
 
@@ -2118,7 +2202,7 @@ ul.wc_coupon_list_block {
 
 			&::after {
 				font-family: "Dashicons";
-				speak: none;
+				speak: never;
 				font-weight: normal;
 				font-variant: normal;
 				text-transform: none;
@@ -2630,6 +2714,30 @@ ul.wc_coupon_list_block {
 
 		td.column-order_status {
 			float: right;
+		}
+	}
+
+	.wc_addons_wrap {
+
+		.addons-promotion-block {
+			flex-direction: column;
+			padding: 24px;
+
+			.addons-img {
+				height: auto;
+				width: 100%;
+				max-width: 240px;
+				margin: 0 auto 20px;
+			}
+		}
+
+		.addons-promotion-block-content {
+			display: block;
+			margin-left: 0;
+		}
+
+		.addons-promotion-block-title {
+			margin-top: 4px;
 		}
 	}
 }
@@ -3156,6 +3264,13 @@ table.wc_input_table {
 
 	tr:last-child td {
 		border-bottom: 0;
+	}
+}
+
+table.wc_tax_rates {
+
+	td.country {
+		position: relative;
 	}
 }
 

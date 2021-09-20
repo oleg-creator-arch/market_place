@@ -3,7 +3,7 @@
  * Abstract Rest CRUD Controller Class
  *
  * @class    WC_REST_CRUD_Controller
- * @package Automattic/WooCommerce/RestApi
+ * @package WooCommerce\RestApi
  * @version  3.0.0
  */
 
@@ -283,6 +283,7 @@ abstract class WC_REST_CRUD_Controller extends WC_REST_Posts_Controller {
 		$args['post_parent__in']     = $request['parent'];
 		$args['post_parent__not_in'] = $request['parent_exclude'];
 		$args['s']                   = $request['search'];
+		$args['fields']              = $this->get_fields_for_response( $request );
 
 		if ( 'date' === $args['orderby'] ) {
 			$args['orderby'] = 'date ID';
@@ -297,6 +298,13 @@ abstract class WC_REST_CRUD_Controller extends WC_REST_Posts_Controller {
 		// Set after into date query. Date query must be specified as an array of an array.
 		if ( isset( $request['after'] ) ) {
 			$args['date_query'][0]['after'] = $request['after'];
+		}
+
+		// Check flag to use post_date vs post_date_gmt.
+		if ( true === $request['dates_are_gmt'] ) {
+			if ( isset( $request['before'] ) || isset( $request['after'] ) ) {
+				$args['date_query'][0]['column'] = 'post_date_gmt';
+			}
 		}
 
 		// Force the post_type argument, since it's not a user input variable.
@@ -479,6 +487,24 @@ abstract class WC_REST_CRUD_Controller extends WC_REST_Posts_Controller {
 	}
 
 	/**
+	 * Get fields for an object if getter is defined.
+	 *
+	 * @param object $object  Object we are fetching response for.
+	 * @param string $context Context of the request. Can be `view` or `edit`.
+	 * @param array  $fields  List of fields to fetch.
+	 * @return array Data fetched from getters.
+	 */
+	public function fetch_fields_using_getters( $object, $context, $fields ) {
+		$data = array();
+		foreach ( $fields as $field ) {
+			if ( method_exists( $this, "api_get_$field" ) ) {
+				$data[ $field ] = $this->{"api_get_$field"}( $object, $context );
+			}
+		}
+		return $data;
+	}
+
+	/**
 	 * Prepare links for the request.
 	 *
 	 * @param WC_Data         $object  Object data.
@@ -542,6 +568,12 @@ abstract class WC_REST_CRUD_Controller extends WC_REST_Posts_Controller {
 			'type'               => 'string',
 			'format'             => 'date-time',
 			'validate_callback'  => 'rest_validate_request_arg',
+		);
+		$params['dates_are_gmt'] = array(
+			'description'       => __( 'Whether to use GMT post dates.', 'woocommerce' ),
+			'type'              => 'boolean',
+			'default'           => false,
+			'validate_callback' => 'rest_validate_request_arg',
 		);
 		$params['exclude'] = array(
 			'description'       => __( 'Ensure result set excludes specific IDs.', 'woocommerce' ),

@@ -74,3 +74,17 @@ Stack trace:
 #9 {main}
   thrown в C:\xampp\htdocs\grundsolo\wp-content\plugins\woosidebars\classes\class-woo-sidebars.php на строке 170
 
+2021-09-17T14:55:07+00:00 CRITICAL Uncaught ValueError: Unknown format specifier "a" in C:\xampp\htdocs\grundsolo\wp-content\plugins\woosidebars\classes\class-woo-sidebars.php:170
+Stack trace:
+#0 C:\xampp\htdocs\grundsolo\wp-content\plugins\woosidebars\classes\class-woo-sidebars.php(170): sprintf('Search %a', 'Widget Areas')
+#1 C:\xampp\htdocs\grundsolo\wp-includes\class-wp-hook.php(287): Woo_Sidebars->register_post_type('')
+#2 C:\xampp\htdocs\grundsolo\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\grundsolo\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\grundsolo\wp-settings.php(546): do_action('init')
+#5 C:\xampp\htdocs\grundsolo\wp-config.php(173): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\grundsolo\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\grundsolo\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\grundsolo\wp-admin\plugins.php(10): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+  thrown в C:\xampp\htdocs\grundsolo\wp-content\plugins\woosidebars\classes\class-woo-sidebars.php на строке 170
+

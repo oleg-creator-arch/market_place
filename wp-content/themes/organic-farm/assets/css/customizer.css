@@ -1,0 +1,39 @@
+/*Cutomizer CSS*/
+#accordion-section-organic_farm_pro h3.accordion-section-title{
+	background: #1fb125;
+	color:#fff;
+}
+#customize-controls #accordion-section-organic_farm_pro .accordion-section-title:focus, #customize-controls #accordion-section-organic_farm_pro .accordion-section-title:hover, #customize-controls #accordion-section-organic_farm_pro.open .accordion-section-title, #customize-controls #accordion-section-organic_farm_pro:hover>.accordion-section-title{
+  background: #16a412;
+  color: #fff;
+}
+#customize-theme-controls #accordion-section-organic_farm_pro .accordion-section-title:after{
+  color:#fff;
+}
+#customize-controls .control-section .accordion-section-title:hover,#customize-controls .control-section .accordion-section-title:focus{
+  border-left-color:#16a412;
+}
+.btn-lg, .btn-group-lg > .btn {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+.upsell-btn > .btn-success {
+  color: #fff;
+  background-image: linear-gradient(to right, #16a412 , #28bc36);
+  text-decoration: none;
+}
+.upsell-btn{
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+.upsell-btn-bottom{
+  margin-top:20px;
+}
+.upsell-btn > a.btn.btn-success.btn {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}

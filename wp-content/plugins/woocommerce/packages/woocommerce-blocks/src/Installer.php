@@ -1,16 +1,11 @@
 <?php
-/**
- * Handles installation of Blocks plugin dependencies.
- *
- * @package WooCommerce/Blocks
- */
-
 namespace Automattic\WooCommerce\Blocks;
-
-defined( 'ABSPATH' ) || exit;
 
 /**
  * Installer class.
+ * Handles installation of Blocks plugin dependencies.
+ *
+ * @internal
  */
 class Installer {
 	/**
@@ -109,7 +104,7 @@ class Installer {
 			function() use ( $table_name ) {
 				echo '<div class="error"><p>';
 				printf(
-					/* Translators: %1$s table name, %2$s database user, %3$s database name. */
+					/* translators: %1$s table name, %2$s database user, %3$s database name. */
 					esc_html__( 'WooCommerce %1$s table creation failed. Does the %2$s user have CREATE privileges on the %3$s database?', 'woocommerce' ),
 					'<code>' . esc_html( $table_name ) . '</code>',
 					'<code>' . esc_html( DB_USER ) . '</code>',

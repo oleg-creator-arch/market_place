@@ -3,23 +3,24 @@
  */
 import { __ } from '@wordpress/i18n';
 import { BlockControls, InspectorControls } from '@wordpress/block-editor';
-import { ServerSideRender } from '@wordpress/editor';
+import ServerSideRender from '@wordpress/server-side-render';
 import {
 	Button,
 	Disabled,
 	PanelBody,
 	Placeholder,
-	Toolbar,
+	ToolbarGroup,
 	withSpokenMessages,
 } from '@wordpress/components';
-import { Component, Fragment } from '@wordpress/element';
+import { Component } from '@wordpress/element';
 import { Icon, tags } from '@woocommerce/icons';
 import PropTypes from 'prop-types';
-import GridContentControl from '@woocommerce/block-components/grid-content-control';
-import GridLayoutControl from '@woocommerce/block-components/grid-layout-control';
-import ProductAttributeTermControl from '@woocommerce/block-components/product-attribute-term-control';
-import ProductOrderbyControl from '@woocommerce/block-components/product-orderby-control';
+import GridContentControl from '@woocommerce/editor-components/grid-content-control';
+import GridLayoutControl from '@woocommerce/editor-components/grid-layout-control';
+import ProductAttributeTermControl from '@woocommerce/editor-components/product-attribute-term-control';
+import ProductOrderbyControl from '@woocommerce/editor-components/product-orderby-control';
 import { gridBlockPreview } from '@woocommerce/resource-previews';
+import { getSetting } from '@woocommerce/settings';
 
 /**
  * Component to handle edit mode of "Products by Attribute".
@@ -48,6 +49,10 @@ class ProductsByAttributeBlock extends Component {
 						rows={ rows }
 						alignButtons={ alignButtons }
 						setAttributes={ setAttributes }
+						minColumns={ getSetting( 'min_columns', 1 ) }
+						maxColumns={ getSetting( 'max_columns', 6 ) }
+						minRows={ getSetting( 'min_rows', 1 ) }
+						maxRows={ getSetting( 'max_rows', 6 ) }
 					/>
 				</PanelBody>
 				<PanelBody
@@ -85,6 +90,7 @@ class ProductsByAttributeBlock extends Component {
 						onOperatorChange={ ( value = 'any' ) =>
 							setAttributes( { attrOperator: value } )
 						}
+						isCompact={ true }
 					/>
 				</PanelBody>
 				<PanelBody
@@ -162,9 +168,9 @@ class ProductsByAttributeBlock extends Component {
 		}
 
 		return (
-			<Fragment>
+			<>
 				<BlockControls>
-					<Toolbar
+					<ToolbarGroup
 						controls={ [
 							{
 								icon: 'edit',
@@ -187,7 +193,7 @@ class ProductsByAttributeBlock extends Component {
 						/>
 					</Disabled>
 				) }
-			</Fragment>
+			</>
 		);
 	}
 }

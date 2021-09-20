@@ -38,7 +38,9 @@ class Controller extends \WC_REST_Reports_Controller {
 	 * @var array
 	 */
 	protected $param_mapping = array(
-		'products' => 'product_includes',
+		'categories' => 'category_includes',
+		'products'   => 'product_includes',
+		'variations' => 'variation_includes',
 	);
 
 	/**
@@ -154,8 +156,8 @@ class Controller extends \WC_REST_Reports_Controller {
 	public function get_item_schema() {
 		$data_values = array(
 			'items_sold'   => array(
-				'title'       => __( 'Items Sold', 'woocommerce' ),
-				'description' => __( 'Number of items sold.', 'woocommerce' ),
+				'title'       => __( 'Products Sold', 'woocommerce' ),
+				'description' => __( 'Number of product items sold.', 'woocommerce' ),
 				'type'        => 'integer',
 				'context'     => array( 'view', 'edit' ),
 				'readonly'    => true,

@@ -33,8 +33,14 @@ const cartItemErrorCodes = [
  * The error message is derived by the hydrated API request passed to the
  * checkout block.
  */
-const CheckoutError = () => {
-	const checkoutData = getSetting( 'checkoutData', {} );
+const CheckoutOrderError = () => {
+	const preloadedApiRequests = getSetting( 'preloadedApiRequests', {} );
+	const checkoutData = {
+		code: '',
+		message: '',
+		...( preloadedApiRequests[ '/wc/store/checkout' ]?.body || {} ),
+	};
+
 	const errorData = {
 		code: checkoutData.code || 'unknown',
 		message:
@@ -63,7 +69,8 @@ const CheckoutError = () => {
 /**
  * Get the error message to display.
  *
- * @param {Object} errorData Object containing code and message.
+ * @param {Object} props Incoming props for the component.
+ * @param {Object} props.errorData Object containing code and message.
  */
 const ErrorTitle = ( { errorData } ) => {
 	let heading = __( 'Checkout error', 'woocommerce' );
@@ -83,7 +90,8 @@ const ErrorTitle = ( { errorData } ) => {
 /**
  * Get the error message to display.
  *
- * @param {Object} errorData Object containing code and message.
+ * @param {Object} props Incoming props for the component.
+ * @param {Object} props.errorData Object containing code and message.
  */
 const ErrorMessage = ( { errorData } ) => {
 	let message = errorData.message;
@@ -104,7 +112,8 @@ const ErrorMessage = ( { errorData } ) => {
 /**
  * Get the CTA button to display.
  *
- * @param {Object} errorData Object containing code and message.
+ * @param {Object} props Incoming props for the component.
+ * @param {Object} props.errorData Object containing code and message.
  */
 const ErrorButton = ( { errorData } ) => {
 	let buttonText = __( 'Retry', 'woocommerce' );
@@ -124,4 +133,4 @@ const ErrorButton = ( { errorData } ) => {
 	);
 };
 
-export default CheckoutError;
+export default CheckoutOrderError;

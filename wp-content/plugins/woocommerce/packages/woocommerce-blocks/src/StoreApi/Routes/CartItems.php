@@ -1,21 +1,12 @@
 <?php
-/**
- * Cart items route.
- *
- * @internal This API is used internally by Blocks--it is still in flux and may be subject to revisions.
- * @package WooCommerce/Blocks
- */
-
 namespace Automattic\WooCommerce\Blocks\StoreApi\Routes;
-
-defined( 'ABSPATH' ) || exit;
-
-use Automattic\WooCommerce\Blocks\StoreApi\Utilities\CartController;
 
 /**
  * CartItems class.
+ *
+ * @internal This API is used internally by Blocks--it is still in flux and may be subject to revisions.
  */
-class CartItems extends AbstractRoute {
+class CartItems extends AbstractCartRoute {
 	/**
 	 * Get the path of this REST route.
 	 *
@@ -51,7 +42,8 @@ class CartItems extends AbstractRoute {
 				'callback'            => [ $this, 'get_response' ],
 				'permission_callback' => '__return_true',
 			],
-			'schema' => [ $this->schema, 'get_public_item_schema' ],
+			'schema'      => [ $this->schema, 'get_public_item_schema' ],
+			'allow_batch' => [ 'v1' => true ],
 		];
 	}
 
@@ -63,8 +55,7 @@ class CartItems extends AbstractRoute {
 	 * @return \WP_REST_Response
 	 */
 	protected function get_route_response( \WP_REST_Request $request ) {
-		$controller = new CartController();
-		$cart_items = $controller->get_cart_items();
+		$cart_items = $this->cart_controller->get_cart_items();
 		$items      = [];
 
 		foreach ( $cart_items as $cart_item ) {
@@ -90,8 +81,7 @@ class CartItems extends AbstractRoute {
 			throw new RouteException( 'woocommerce_rest_cart_item_exists', __( 'Cannot create an existing cart item.', 'woocommerce' ), 400 );
 		}
 
-		$controller = new CartController();
-		$result     = $controller->add_to_cart(
+		$result = $this->cart_controller->add_to_cart(
 			[
 				'id'        => $request['id'],
 				'quantity'  => $request['quantity'],
@@ -99,7 +89,7 @@ class CartItems extends AbstractRoute {
 			]
 		);
 
-		$response = rest_ensure_response( $this->prepare_item_for_response( $controller->get_cart_item( $result ), $request ) );
+		$response = rest_ensure_response( $this->prepare_item_for_response( $this->cart_controller->get_cart_item( $result ), $request ) );
 		$response->set_status( 201 );
 		return $response;
 	}
@@ -112,8 +102,7 @@ class CartItems extends AbstractRoute {
 	 * @return \WP_REST_Response
 	 */
 	protected function get_route_delete_response( \WP_REST_Request $request ) {
-		$controller = new CartController();
-		$controller->empty_cart();
+		$this->cart_controller->empty_cart();
 		return new \WP_REST_Response( [], 200 );
 	}
 

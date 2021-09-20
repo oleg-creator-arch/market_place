@@ -2,7 +2,6 @@
  * External dependencies
  */
 import { __ } from '@wordpress/i18n';
-import { Fragment } from '@wordpress/element';
 import { InspectorControls } from '@wordpress/block-editor';
 import {
 	Placeholder,
@@ -11,10 +10,11 @@ import {
 	ToggleControl,
 	Button,
 } from '@wordpress/components';
-import { PRODUCT_COUNT } from '@woocommerce/block-settings';
 import { getAdminLink } from '@woocommerce/settings';
-import HeadingToolbar from '@woocommerce/block-components/heading-toolbar';
-import BlockTitle from '@woocommerce/block-components/block-title';
+import { blocksConfig } from '@woocommerce/block-settings';
+import HeadingToolbar from '@woocommerce/editor-components/heading-toolbar';
+import BlockTitle from '@woocommerce/editor-components/block-title';
+import ToggleButtonControl from '@woocommerce/editor-components/toggle-button-control';
 import { Icon, bill, external } from '@woocommerce/icons';
 
 /**
@@ -22,9 +22,8 @@ import { Icon, bill, external } from '@woocommerce/icons';
  */
 import Block from './block.js';
 import './editor.scss';
-import ToggleButtonControl from '../../components/toggle-button-control';
 
-export default function( { attributes, setAttributes } ) {
+export default function ( { attributes, setAttributes } ) {
 	const {
 		className,
 		heading,
@@ -134,8 +133,7 @@ export default function( { attributes, setAttributes } ) {
 			</p>
 			<Button
 				className="wc-block-price-slider__add-product-button"
-				isDefault
-				isLarge
+				isSecondary
 				href={ getAdminLink( 'post-new.php?post_type=product' ) }
 			>
 				{ __( 'Add new product', 'woocommerce' ) +
@@ -153,8 +151,8 @@ export default function( { attributes, setAttributes } ) {
 	);
 
 	return (
-		<Fragment>
-			{ PRODUCT_COUNT === 0 ? (
+		<>
+			{ blocksConfig.productCount === 0 ? (
 				noProductsPlaceholder()
 			) : (
 				<div className={ className }>
@@ -171,6 +169,6 @@ export default function( { attributes, setAttributes } ) {
 					</Disabled>
 				</div>
 			) }
-		</Fragment>
+		</>
 	);
 }

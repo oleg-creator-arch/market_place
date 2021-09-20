@@ -2,25 +2,21 @@
  * External dependencies
  */
 import { __ } from '@wordpress/i18n';
-import { __experimentalCreateInterpolateElement } from 'wordpress-element';
+import { createInterpolateElement } from 'wordpress-element';
 import {
 	Notice,
 	ToggleControl,
-	Toolbar,
+	ToolbarGroup,
 	RangeControl,
 	SelectControl,
 } from '@wordpress/components';
 import { BlockControls } from '@wordpress/block-editor';
-import { getAdminLink } from '@woocommerce/settings';
-import {
-	REVIEW_RATINGS_ENABLED,
-	SHOW_AVATARS,
-} from '@woocommerce/block-settings';
-import ToggleButtonControl from '@woocommerce/block-components/toggle-button-control';
+import { getAdminLink, getSetting } from '@woocommerce/settings';
+import ToggleButtonControl from '@woocommerce/editor-components/toggle-button-control';
 
 export const getBlockControls = ( editMode, setAttributes ) => (
 	<BlockControls>
-		<Toolbar
+		<ToolbarGroup
 			controls={ [
 				{
 					icon: 'edit',
@@ -34,6 +30,8 @@ export const getBlockControls = ( editMode, setAttributes ) => (
 );
 
 export const getSharedReviewContentControls = ( attributes, setAttributes ) => {
+	const showAvatars = getSetting( 'showAvatars', true );
+	const reviewRatingsEnabled = getSetting( 'reviewRatingsEnabled', true );
 	return (
 		<>
 			<ToggleControl
@@ -45,12 +43,12 @@ export const getSharedReviewContentControls = ( attributes, setAttributes ) => {
 					} )
 				}
 			/>
-			{ attributes.showReviewRating && ! REVIEW_RATINGS_ENABLED && (
+			{ attributes.showReviewRating && ! reviewRatingsEnabled && (
 				<Notice
 					className="wc-block-base-control-notice"
 					isDismissible={ false }
 				>
-					{ __experimentalCreateInterpolateElement(
+					{ createInterpolateElement(
 						__(
 							'Product rating is disabled in your <a>store settings</a>.',
 							'woocommerce'
@@ -134,12 +132,12 @@ export const getSharedReviewContentControls = ( attributes, setAttributes ) => {
 							setAttributes( { imageType: value } )
 						}
 					/>
-					{ attributes.imageType === 'reviewer' && ! SHOW_AVATARS && (
+					{ attributes.imageType === 'reviewer' && ! showAvatars && (
 						<Notice
 							className="wc-block-base-control-notice"
 							isDismissible={ false }
 						>
-							{ __experimentalCreateInterpolateElement(
+							{ createInterpolateElement(
 								__(
 									'Reviewer photo is disabled in your <a>site settings</a>.',
 									'woocommerce'

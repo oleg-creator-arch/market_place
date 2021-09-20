@@ -1,18 +1,13 @@
 <?php
-/**
- * Helper class to convert notices to exceptions.
- *
- * @package WooCommerce/Blocks
- */
-
 namespace Automattic\WooCommerce\Blocks\StoreApi\Utilities;
-
-defined( 'ABSPATH' ) || exit;
 
 use Automattic\WooCommerce\Blocks\StoreApi\Routes\RouteException;
 
 /**
  * NoticeHandler class.
+ * Helper class to convert notices to exceptions.
+ *
+ * @internal This API is used internally by Blocks--it is still in flux and may be subject to revisions.
  */
 class NoticeHandler {
 
@@ -39,7 +34,7 @@ class NoticeHandler {
 		wc_clear_notices();
 
 		foreach ( $error_notices as $error_notice ) {
-			throw new RouteException( $error_code, $error_notice['notice'], 400 );
+			throw new RouteException( $error_code, wp_strip_all_tags( $error_notice['notice'] ), 400 );
 		}
 	}
 }

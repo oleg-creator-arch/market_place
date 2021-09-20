@@ -1,3 +1,8 @@
+/**
+ * External dependencies
+ */
+import { getSetting } from '@woocommerce/settings';
+
 const blockAttributes = {
 	isPreview: {
 		type: 'boolean',
@@ -9,6 +14,10 @@ const blockAttributes = {
 		default: false,
 	},
 	requireCompanyField: {
+		type: 'boolean',
+		default: false,
+	},
+	allowCreateAccount: {
 		type: 'boolean',
 		default: false,
 	},
@@ -24,6 +33,10 @@ const blockAttributes = {
 		type: 'boolean',
 		default: false,
 	},
+	showOrderNotes: {
+		type: 'boolean',
+		default: true,
+	},
 	showPolicyLinks: {
 		type: 'boolean',
 		default: true,
@@ -35,6 +48,14 @@ const blockAttributes = {
 	cartPageId: {
 		type: 'number',
 		default: 0,
+	},
+	hasDarkControls: {
+		type: 'boolean',
+		default: getSetting( 'hasDarkEditorStyleSupport', false ),
+	},
+	showRateAfterTaxName: {
+		type: 'boolean',
+		default: getSetting( 'displayCartPricesIncludingTax', false ),
 	},
 };
 

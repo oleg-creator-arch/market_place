@@ -3,7 +3,6 @@
  */
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { decodeEntities } from '@wordpress/html-entities';
 import {
 	useInnerBlockLayoutContext,
 	useProductDataContext,
@@ -12,6 +11,8 @@ import { getColorClassName, getFontSizeClass } from '@wordpress/block-editor';
 import { isFeaturePluginBuild } from '@woocommerce/block-settings';
 import { gatedStyledText } from '@woocommerce/atomic-utils';
 import { withProductDataContext } from '@woocommerce/shared-hocs';
+import ProductName from '@woocommerce/base-components/product-name';
+import { useStoreEvents } from '@woocommerce/base-context/hooks';
 
 /**
  * Internal dependencies
@@ -30,7 +31,6 @@ import './style.scss';
  * @param {string}  [props.customColor]    Custom title color value.
  * @param {string}  [props.fontSize]       Title font size name.
  * @param {number } [props.customFontSize] Custom font size value.
- * @param {Object}  [props.product]        Optional product object. Product from context
  * will be used if this is not provided.
  * @return {*} The component.
  */
@@ -46,6 +46,7 @@ export const Block = ( {
 } ) => {
 	const { parentClassName } = useInnerBlockLayoutContext();
 	const { product } = useProductDataContext();
+	const { dispatchStoreEvent } = useStoreEvents();
 	const TagName = `h${ headingLevel }`;
 
 	const colorClass = getColorClassName( 'color', color );
@@ -69,9 +70,8 @@ export const Block = ( {
 						[ `${ parentClassName }__product-title` ]: parentClassName,
 						[ `wc-block-components-product-title--align-${ align }` ]:
 							align && isFeaturePluginBuild(),
-						[ titleClasses ]: isFeaturePluginBuild()
-					},
-
+						[ titleClasses ]: isFeaturePluginBuild(),
+					}
 				) }
 				style={ gatedStyledText( {
 					color: customColor,
@@ -81,8 +81,6 @@ export const Block = ( {
 		);
 	}
 
-	const productName = decodeEntities( product.name );
-
 	return (
 		// @ts-ignore
 		<TagName
@@ -91,28 +89,29 @@ export const Block = ( {
 				'wc-block-components-product-title',
 				{
 					[ `${ parentClassName }__product-title` ]: parentClassName,
-					[ `wc-block-components-product-title__align-${ align }` ]:
+					[ `wc-block-components-product-title--align-${ align }` ]:
 						align && isFeaturePluginBuild(),
-				},
+				}
 			) }
 		>
-			{ productLink ? (
-				<a
-					href={ product.permalink }
-					rel="nofollow"
-					className={ classnames( {
-						[ titleClasses ]: isFeaturePluginBuild(),
-					} ) }
-					style={ gatedStyledText( {
-						color: customColor,
-						fontSize: customFontSize,
-					} ) }
-				>
-					{ productName }
-				</a>
-			) : (
-				productName
-			) }
+			<ProductName
+				className={ classnames( {
+					[ titleClasses ]: isFeaturePluginBuild(),
+				} ) }
+				disabled={ ! productLink }
+				name={ product.name }
+				permalink={ product.permalink }
+				rel={ productLink ? 'nofollow' : null }
+				style={ gatedStyledText( {
+					color: customColor,
+					fontSize: customFontSize,
+				} ) }
+				onClick={ () => {
+					dispatchStoreEvent( 'product-view-link', {
+						product,
+					} );
+				} }
+			/>
 		</TagName>
 	);
 };

@@ -1,18 +1,10 @@
 <?php
-/**
- * Cart remove coupon route.
- *
- * @package WooCommerce/Blocks
- */
-
 namespace Automattic\WooCommerce\Blocks\StoreApi\Routes;
-
-defined( 'ABSPATH' ) || exit;
-
-use Automattic\WooCommerce\Blocks\StoreApi\Utilities\CartController;
 
 /**
  * CartRemoveCoupon class.
+ *
+ * @internal This API is used internally by Blocks--it is still in flux and may be subject to revisions.
  */
 class CartRemoveCoupon extends AbstractCartRoute {
 	/**
@@ -42,7 +34,8 @@ class CartRemoveCoupon extends AbstractCartRoute {
 					],
 				],
 			],
-			'schema' => [ $this->schema, 'get_public_item_schema' ],
+			'schema'      => [ $this->schema, 'get_public_item_schema' ],
+			'allow_batch' => [ 'v1' => true ],
 		];
 	}
 
@@ -58,8 +51,7 @@ class CartRemoveCoupon extends AbstractCartRoute {
 			throw new RouteException( 'woocommerce_rest_cart_coupon_disabled', __( 'Coupons are disabled.', 'woocommerce' ), 404 );
 		}
 
-		$controller  = new CartController();
-		$cart        = $controller->get_cart_instance();
+		$cart        = $this->cart_controller->get_cart_instance();
 		$coupon_code = wc_format_coupon_code( $request['code'] );
 		$coupon      = new \WC_Coupon( $coupon_code );
 
@@ -67,11 +59,11 @@ class CartRemoveCoupon extends AbstractCartRoute {
 			throw new RouteException( 'woocommerce_rest_cart_coupon_error', __( 'Invalid coupon code.', 'woocommerce' ), 400 );
 		}
 
-		if ( ! $controller->has_coupon( $coupon_code ) ) {
+		if ( ! $this->cart_controller->has_coupon( $coupon_code ) ) {
 			throw new RouteException( 'woocommerce_rest_cart_coupon_invalid_code', __( 'Coupon cannot be removed because it is not already applied to the cart.', 'woocommerce' ), 409 );
 		}
 
-		$cart = $controller->get_cart_instance();
+		$cart = $this->cart_controller->get_cart_instance();
 		$cart->remove_coupon( $coupon_code );
 		$cart->calculate_totals();
 

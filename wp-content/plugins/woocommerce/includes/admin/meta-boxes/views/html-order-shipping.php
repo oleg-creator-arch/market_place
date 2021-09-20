@@ -31,11 +31,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 					$found_method = false;
 
 					foreach ( $shipping_methods as $method ) {
-						$current_method = ( 0 === strpos( $item->get_method_id(), $method->id ) ) ? $item->get_method_id() : $method->id;
+						$is_active = $item->get_method_id() === $method->id;
 
-						echo '<option value="' . esc_attr( $current_method ) . '" ' . selected( $item->get_method_id() === $current_method, true, false ) . '>' . esc_html( $method->get_method_title() ) . '</option>';
+						echo '<option value="' . esc_attr( $method->id ) . '" ' . selected( true, $is_active, false ) . '>' . esc_html( $method->get_method_title() ) . '</option>';
 
-						if ( $item->get_method_id() === $current_method ) {
+						if ( $is_active ) {
 							$found_method = true;
 						}
 					}
@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</div>
 
 		<?php do_action( 'woocommerce_before_order_itemmeta', $item_id, $item, null ); ?>
-		<?php require 'html-order-item-meta.php'; ?>
+		<?php require __DIR__ . '/html-order-item-meta.php'; ?>
 		<?php do_action( 'woocommerce_after_order_itemmeta', $item_id, $item, null ); ?>
 	</td>
 

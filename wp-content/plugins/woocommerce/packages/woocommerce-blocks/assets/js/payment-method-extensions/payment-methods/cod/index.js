@@ -23,7 +23,7 @@ const label = decodeEntities( settings.title ) || defaultLabel;
  * Content component
  */
 const Content = () => {
-	return <div>{ decodeEntities( settings.description || '' ) }</div>;
+	return decodeEntities( settings.description || '' );
 };
 
 /**
@@ -39,8 +39,11 @@ const Label = ( props ) => {
 /**
  * Determine whether COD is available for this cart/order.
  *
- * @param boolean cartNeedsShipping True if the cart contains any physical/shippable products.
- * @return boolean True if COD payment method should be displayed as a payment option.
+ * @param {Object} props Incoming props for the component.
+ * @param {boolean} props.cartNeedsShipping True if the cart contains any physical/shippable products.
+ * @param {boolean} props.selectedShippingMethods
+ *
+ * @return {boolean}  True if COD payment method should be displayed as a payment option.
  */
 const canMakePayment = ( { cartNeedsShipping, selectedShippingMethods } ) => {
 	if ( ! settings.enableForVirtual && ! cartNeedsShipping ) {
@@ -49,7 +52,7 @@ const canMakePayment = ( { cartNeedsShipping, selectedShippingMethods } ) => {
 		return false;
 	}
 
-	if ( ! settings.enableForShippingMethods ) {
+	if ( ! settings.enableForShippingMethods.length ) {
 		// Store does not limit COD to specific shipping methods.
 		return true;
 	}
@@ -74,11 +77,11 @@ const cashOnDeliveryPaymentMethod = {
 	label: <Label />,
 	content: <Content />,
 	edit: <Content />,
-	icons: null,
 	canMakePayment,
 	ariaLabel: label,
+	supports: {
+		features: settings?.supports ?? [],
+	},
 };
 
-registerPaymentMethod(
-	( Config ) => new Config( cashOnDeliveryPaymentMethod )
-);
+registerPaymentMethod( cashOnDeliveryPaymentMethod );
