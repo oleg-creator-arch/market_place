@@ -1,0 +1,8 @@
+2021-09-23T08:29:54+00:00 CRITICAL Uncaught Error: Unknown named parameter $id in C:\xampp\htdocs\grundsolo\wp-includes\class-wp-hook.php:303
+Stack trace:
+#0 C:\xampp\htdocs\grundsolo\wp-includes\class-wp-hook.php(327): WP_Hook->apply_filters('', Array)
+#1 C:\xampp\htdocs\grundsolo\wp-includes\plugin.php(518): WP_Hook->do_action(Array)
+#2 C:\xampp\htdocs\grundsolo\wp-cron.php(138): do_action_ref_array('hmbkp_schedule_...', Array)
+#3 {main}
+  thrown в C:\xampp\htdocs\grundsolo\wp-includes\class-wp-hook.php на строке 303
+
